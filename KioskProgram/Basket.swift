@@ -35,11 +35,20 @@ class Basket {
     }
     
     //장바구니의 상품을 삭제하는 메소드
-    func removeProduct(index : Int) {
-        if index >= basketList.count {
-            print("삭제할 항목의 번호가 존재하지 않습니다.")
+    func removeProduct() {
+        print("장바구니 내역:")
+        for i in (0..<basketList.count) {
+            print("\(i+1). \(basketList[i])")
+        }
+        print("삭제할 상품의 번호를 입력하세요. \n0번은 취소입니다.")
+        let deleteNumber = Int(readLine() ?? "0")
+        if deleteNumber!-1 >= basketList.count {
+            print("삭제할 상품의 번호가 존재하지 않습니다.")
+        } else if deleteNumber == 0 {
+            print("취소되었습니다.")
         } else {
-            basketList.remove(at: index)
+            basketList.remove(at: deleteNumber!-1)
+            print("\(deleteNumber!)번 상품이 삭제되었습니다.")
         }
     }
     
@@ -47,8 +56,8 @@ class Basket {
     func removeEverything() {
         print("장바구니의 상품을 전체삭제 하시겠습니까?")
         print("1. Yes \n2. No")
-        let yesorno = Int(readLine() ?? "2")
-        if yesorno == 1 {
+        let chooseOpetion = Int(readLine() ?? "2")
+        if chooseOpetion == 1 {
             basketList.removeAll()
             print("장바구니의 상품이 전체 삭제되었습니다.")
         } else {
