@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* main.swift */; };
+		AC4C05A92A6E59FF008DC127 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C05A82A6E59FF008DC127 /* main.swift */; };
+		AC8E3CC42A6E2ABD00C97564 /* BasicMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E3CC32A6E2ABD00C97564 /* BasicMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC4C05A82A6E59FF008DC127 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AC8E3CC32A6E2ABD00C97564 /* BasicMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMenu.swift; sourceTree = "<group>"; };
 		DB642FF32A6E0E2000A3D4BD /* KioskProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KioskProgram; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB642FF62A6E0E2000A3D4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 		DB642FF52A6E0E2000A3D4BD /* KioskProgram */ = {
 			isa = PBXGroup;
 			children = (
-				DB642FF62A6E0E2000A3D4BD /* main.swift */,
+				AC4C05A82A6E59FF008DC127 /* main.swift */,
+				AC8E3CC32A6E2ABD00C97564 /* BasicMenu.swift */,
 			);
 			path = KioskProgram;
 			sourceTree = "<group>";
@@ -120,7 +123,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
+				AC4C05A92A6E59FF008DC127 /* main.swift in Sources */,
+				AC8E3CC42A6E2ABD00C97564 /* BasicMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVX5V7QT8W;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -255,7 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVX5V7QT8W;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
