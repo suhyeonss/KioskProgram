@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2DAC7D2A6F8D5600CEDDF9 /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC782A6F8D5600CEDDF9 /* Cash.swift */; };
+		4E2DAC7E2A6F8D5600CEDDF9 /* PaymentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */; };
+		4E2DAC7F2A6F8D5600CEDDF9 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */; };
+		4E2DAC802A6F8D5600CEDDF9 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */; };
+		4E2DAC812A6F8D5600CEDDF9 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC7C2A6F8D5600CEDDF9 /* Mobile.swift */; };
 		D68B52F22A6F684E00B7D356 /* orderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52F02A6F684E00B7D356 /* orderType.swift */; };
 		D68B52F32A6F684E00B7D356 /* itemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52F12A6F684E00B7D356 /* itemType.swift */; };
 		DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* main.swift */; };
@@ -27,6 +32,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E2DAC782A6F8D5600CEDDF9 /* Cash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
+		4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFunction.swift; sourceTree = "<group>"; };
+		4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		4E2DAC7C2A6F8D5600CEDDF9 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		D68B52F02A6F684E00B7D356 /* orderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderType.swift; sourceTree = "<group>"; };
 		D68B52F12A6F684E00B7D356 /* itemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemType.swift; sourceTree = "<group>"; };
 		DB642FF32A6E0E2000A3D4BD /* KioskProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KioskProgram; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2DAC772A6F8D5600CEDDF9 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				4E2DAC782A6F8D5600CEDDF9 /* Cash.swift */,
+				4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */,
+				4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */,
+				4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */,
+				4E2DAC7C2A6F8D5600CEDDF9 /* Mobile.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		DB642FEA2A6E0E1F00A3D4BD = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +92,7 @@
 				D68B52F12A6F684E00B7D356 /* itemType.swift */,
 				D68B52F02A6F684E00B7D356 /* orderType.swift */,
 				DB8A56502A6F7ADB009B4717 /* BasicMenu.swift */,
+				4E2DAC772A6F8D5600CEDDF9 /* Payment */,
 			);
 			path = KioskProgram;
 			sourceTree = "<group>";
@@ -132,11 +155,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2DAC7F2A6F8D5600CEDDF9 /* CreditCard.swift in Sources */,
 				D68B52F22A6F684E00B7D356 /* orderType.swift in Sources */,
 				D68B52F32A6F684E00B7D356 /* itemType.swift in Sources */,
 				DB8A56512A6F7ADB009B4717 /* BasicMenu.swift in Sources */,
 				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
+				4E2DAC812A6F8D5600CEDDF9 /* Mobile.swift in Sources */,
+				4E2DAC7D2A6F8D5600CEDDF9 /* Cash.swift in Sources */,
 				DB642FFE2A6E1AC000A3D4BD /* Basket.swift in Sources */,
+				4E2DAC802A6F8D5600CEDDF9 /* Payment.swift in Sources */,
+				4E2DAC7E2A6F8D5600CEDDF9 /* PaymentFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
