@@ -35,7 +35,6 @@ class Basket {
             }
         }
         print("총액 : \(total)")
-        
     }
 
     //장바구니에 상품을 추가하는 메소드
@@ -86,5 +85,4 @@ class Basket {
             print("취소되었습니다.")
         }
     }
-    
 }
