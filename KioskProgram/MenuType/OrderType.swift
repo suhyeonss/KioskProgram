@@ -8,6 +8,7 @@
 import Foundation
 
 class OrderType: MenuType {
+    var orderType: String = ""
     
     override func chooseOrderType() {
         print("\n[ 식사하실 장소를 선택해 주세요 ]")

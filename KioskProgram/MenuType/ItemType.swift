@@ -8,6 +8,7 @@
 import Foundation
 
 class ItemType: MenuType {
+    var itemType: String = ""
     
     override func chooseItemType() {
         print("\n[ 단품과 세트를 선택해 주세요 ]")

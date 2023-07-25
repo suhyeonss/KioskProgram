@@ -9,9 +9,6 @@ import Foundation
 
 class MenuType {
 
-    var orderType: String = ""
-    var itemType: String = ""
-    
     func chooseOrderType() {
 
     }
@@ -24,7 +21,31 @@ class MenuType {
         
     }
     
-    func showMenu(for menucategory: Int) {
+    func showBurgerMenu() {
+        
+    }
+    
+    func mainMenu() {
+        
+    }
+    
+    func showMcMorningMenu() {
+        
+    }
+    
+    func showCoffeeMenu() {
+        
+    }
+    
+    func showDrinkMenu() {
+        
+    }
+    
+    func showSideMenu() {
+        
+    }
+    
+    func showDessertMenu() {
         
     }
 }

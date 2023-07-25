@@ -14,19 +14,15 @@
  */
 
 class Main {
-
     let orderType = OrderType()
     let itemType = ItemType()
-    
-    
-    
-    
-    
+    let menu = Menu()
+    let menuType = MenuType()
+    let menuFun = MenuFunctions()
 }
 
 
 
+let mc = Main()
 
-
-
-
+mc.menuFun.displayInfo()
