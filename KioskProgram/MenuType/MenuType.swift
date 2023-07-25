@@ -21,7 +21,11 @@ class MenuType {
         
     }
     
-    func showMenu(for menucategory: Int) {
+    func showSingleMenu(for menucategory: Int) {
+        
+    }
+    
+    func showSetMenu(for menucategory: Int) {
         
     }
 }

@@ -7,31 +7,31 @@
 
 import Foundation
 
-class MenuFunction: Menu {
+class SingleMenuFunction: Menu {
     
-    var macmoringArray: [SingleMenu] = SingleMenu.singleMenuList[0]
-    var sideArray: [SingleMenu] = SingleMenu.singleMenuList[1]
-    var maccafeArray: [SingleMenu] = SingleMenu.singleMenuList[2]
-    var drinkArray: [SingleMenu] = SingleMenu.singleMenuList[3]
+    var singleMacmoringArray: [SingleMenu] = SingleMenu.singleMenuList[0]
+    var singleSideArray: [SingleMenu] = SingleMenu.singleMenuList[1]
+    var singleMaccafeArray: [SingleMenu] = SingleMenu.singleMenuList[2]
+    var singleDrinkArray: [SingleMenu] = SingleMenu.singleMenuList[3]
     
     override func addMacMoring(name:String, price:Int){
         let macMoring = SingleMenu(name: name, price: price)
-        macmoringArray.append(macMoring)
+        singleMacmoringArray.append(macMoring)
     }
 
     override func addSide(name:String, price:Int){
         let side = SingleMenu(name: name, price: price)
-        sideArray.append(side)
+        singleSideArray.append(side)
     }
 
     override func addMacCafe(name:String, price:Int){
         let macCafe = SingleMenu(name: name, price: price)
-        maccafeArray.append(macCafe)
+        singleMaccafeArray.append(macCafe)
     }
 
     override func addDrink(name:String, price:Int){
         let drink = SingleMenu(name: name, price: price)
-        drinkArray.append(drink)
+        singleDrinkArray.append(drink)
     }
     
 }

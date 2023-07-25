@@ -20,7 +20,6 @@ let menuType = MenuType()
 menuFunctions.displayInfo()
 print(String(repeating: "=", count: 30))
 
-menuFunctions.showMenu(for: 0)
 
 
 
