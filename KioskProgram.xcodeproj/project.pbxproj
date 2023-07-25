@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,7 @@
 		4E2DAC932A6FB02600CEDDF9 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC922A6FB02600CEDDF9 /* OrderType.swift */; };
 		4E2DAC952A6FB03A00CEDDF9 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC942A6FB03A00CEDDF9 /* ItemType.swift */; };
 		D68B52FF2A6F94D400B7D356 /* OrderNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52FE2A6F94D400B7D356 /* OrderNumber.swift */; };
-		DB642FF72A6E0E2000A3D4BD /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* Main.swift */; };
+		DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* main.swift */; };
 		DB642FFE2A6E1AC000A3D4BD /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FFD2A6E1AC000A3D4BD /* Basket.swift */; };
 		DB8A56512A6F7ADB009B4717 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A56502A6F7ADB009B4717 /* Menu.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		4E2DAC942A6FB03A00CEDDF9 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		D68B52FE2A6F94D400B7D356 /* OrderNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderNumber.swift; sourceTree = "<group>"; };
 		DB642FF32A6E0E2000A3D4BD /* KioskProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KioskProgram; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB642FF62A6E0E2000A3D4BD /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		DB642FF62A6E0E2000A3D4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DB642FFD2A6E1AC000A3D4BD /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		DB8A56502A6F7ADB009B4717 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +140,7 @@
 		DB642FF52A6E0E2000A3D4BD /* KioskProgram */ = {
 			isa = PBXGroup;
 			children = (
-				DB642FF62A6E0E2000A3D4BD /* Main.swift */,
+				DB642FF62A6E0E2000A3D4BD /* main.swift */,
 				4E2DAC832A6F991A00CEDDF9 /* MenuType */,
 				4E2DAC852A6F9FDA00CEDDF9 /* Menu */,
 				4E2DAC842A6F992F00CEDDF9 /* Basket */,
@@ -186,7 +186,7 @@
 				};
 			};
 			buildConfigurationList = DB642FEE2A6E0E1F00A3D4BD /* Build configuration list for PBXProject "KioskProgram" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -214,7 +214,7 @@
 				4E2DAC8B2A6FA3AF00CEDDF9 /* SingleMenu.swift in Sources */,
 				DB8A56512A6F7ADB009B4717 /* Menu.swift in Sources */,
 				4E2DAC892A6FA17600CEDDF9 /* MenuFunctions.swift in Sources */,
-				DB642FF72A6E0E2000A3D4BD /* Main.swift in Sources */,
+				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
 				4E2DAC812A6F8D5600CEDDF9 /* Mobile.swift in Sources */,
 				4E2DAC932A6FB02600CEDDF9 /* OrderType.swift in Sources */,
 				4E2DAC8F2A6FA47C00CEDDF9 /* SetMenu.swift in Sources */,

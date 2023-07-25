@@ -13,20 +13,14 @@
  5. 홍준영 -> 주문번호 생성 클래스
  */
 
-class Main {
+import Foundation
 
-    let orderType = OrderType()
-    let itemType = ItemType()
-    
-    
-    
-    
-    
-}
+let menuFunctions = MenuFunctions()
+let menuType = MenuType()
+menuFunctions.displayInfo()
+print(String(repeating: "=", count: 30))
 
-
-
-
+menuFunctions.showMenu(for: 0)
 
 
 

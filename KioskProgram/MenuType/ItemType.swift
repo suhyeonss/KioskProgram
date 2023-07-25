@@ -9,6 +9,7 @@ import Foundation
 
 class ItemType: MenuType {
     
+    // 단품 / 세트 보여주는 문구
     override func chooseItemType() {
         print("\n[ 단품과 세트를 선택해 주세요 ]")
         print("1. 단품(Single)")

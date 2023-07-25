@@ -9,9 +9,6 @@ import Foundation
 
 class MenuType {
 
-    var orderType: String = ""
-    var itemType: String = ""
-    
     func chooseOrderType() {
 
     }

@@ -9,6 +9,11 @@ import Foundation
 
 class MenuFunction: Menu {
     
+    var macmoringArray: [SingleMenu] = SingleMenu.singleMenuList[0]
+    var sideArray: [SingleMenu] = SingleMenu.singleMenuList[1]
+    var maccafeArray: [SingleMenu] = SingleMenu.singleMenuList[2]
+    var drinkArray: [SingleMenu] = SingleMenu.singleMenuList[3]
+    
     override func addMacMoring(name:String, price:Int){
         let macMoring = SingleMenu(name: name, price: price)
         macmoringArray.append(macMoring)

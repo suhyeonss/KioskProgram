@@ -9,6 +9,7 @@ import Foundation
 
 class OrderType: MenuType {
     
+    // 포장 방문 보여주는 문구
     override func chooseOrderType() {
         print("\n[ 식사하실 장소를 선택해 주세요 ]")
         print("1. 매장에서 식사(Eat-in)")
