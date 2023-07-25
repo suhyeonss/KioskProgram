@@ -11,6 +11,7 @@
 		D68B52F32A6F684E00B7D356 /* itemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52F12A6F684E00B7D356 /* itemType.swift */; };
 		DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* main.swift */; };
 		DB642FFE2A6E1AC000A3D4BD /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FFD2A6E1AC000A3D4BD /* Basket.swift */; };
+		DB8A56512A6F7ADB009B4717 /* BasicMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A56502A6F7ADB009B4717 /* BasicMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		DB642FF32A6E0E2000A3D4BD /* KioskProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KioskProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB642FF62A6E0E2000A3D4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DB642FFD2A6E1AC000A3D4BD /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		DB8A56502A6F7ADB009B4717 /* BasicMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				DB642FFD2A6E1AC000A3D4BD /* Basket.swift */,
 				D68B52F12A6F684E00B7D356 /* itemType.swift */,
 				D68B52F02A6F684E00B7D356 /* orderType.swift */,
+				DB8A56502A6F7ADB009B4717 /* BasicMenu.swift */,
 			);
 			path = KioskProgram;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			files = (
 				D68B52F22A6F684E00B7D356 /* orderType.swift in Sources */,
 				D68B52F32A6F684E00B7D356 /* itemType.swift in Sources */,
+				DB8A56512A6F7ADB009B4717 /* BasicMenu.swift in Sources */,
 				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
 				DB642FFE2A6E1AC000A3D4BD /* Basket.swift in Sources */,
 			);
