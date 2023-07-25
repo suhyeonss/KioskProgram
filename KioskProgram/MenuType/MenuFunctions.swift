@@ -19,6 +19,10 @@ class MenuFunctions: MenuType {
     let singleMenuList: [[SingleMenu]] = SingleMenu.singleMenuList
     let setMenuList: [[SetMenu]] = SetMenu.setMenuList
     
+    let basketFunctions = BasketFunctions()
+    
+    var basektList = [ProductInfo]()
+    
     override func displayInfo() {
         while true {
             print("\"McDonalds에 오신걸 환영합니다\"")
@@ -33,14 +37,19 @@ class MenuFunctions: MenuType {
                         case 1:
                             print("단품")
                             print(String(repeating: "=", count: 30))
-                            var inputValue = choiceItem
+                            let inputValue = choiceItem
                             showSingleMenu(for: inputValue)
                         case 2:
                             print("세트")
                             print(String(repeating: "=", count: 30))
-                            var inputValue = choiceItem
+                            let inputValue = choiceItem
                             showSetMenu(for: inputValue)
-      
+                            
+                        case 3:
+                            print("장바구니")
+                            print(String(repeating: "=", count: 30))
+                            basketFunctions.showCurrentBasket()
+                            
                         case 0:
                             print("뒤로가기")
                             print(String(repeating: "=", count: 30))
@@ -59,14 +68,21 @@ class MenuFunctions: MenuType {
                     itemType.chooseItemType()
                     if let choiceInput = readLine(), let choiceItem = Int(choiceInput) {
                         switch choiceItem {
+                            
                         case 1:
                             print("단품")
                             var inputValue = choiceItem
                             showSingleMenu(for: inputValue)
+                            
                         case 2:
                             print("세트")
                             var inputValue = choiceItem
                             showSetMenu(for: inputValue)
+                            
+                        case 3:
+                            print("장바구니")
+                            var inputValue = choiceItem
+                            basketFunctions.showCurrentBasket()
                             
                         case 0:
                             print("뒤로가기")

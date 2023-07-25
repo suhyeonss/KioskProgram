@@ -24,7 +24,6 @@
 		D68B52FF2A6F94D400B7D356 /* OrderNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52FE2A6F94D400B7D356 /* OrderNumber.swift */; };
 		DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* main.swift */; };
 		DB642FFE2A6E1AC000A3D4BD /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FFD2A6E1AC000A3D4BD /* Basket.swift */; };
-		DB8A56512A6F7ADB009B4717 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A56502A6F7ADB009B4717 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +57,6 @@
 		DB642FF32A6E0E2000A3D4BD /* KioskProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KioskProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB642FF62A6E0E2000A3D4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DB642FFD2A6E1AC000A3D4BD /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
-		DB8A56502A6F7ADB009B4717 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 		4E2DAC852A6F9FDA00CEDDF9 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				DB8A56502A6F7ADB009B4717 /* Menu.swift */,
 				4E2DAC8A2A6FA3AF00CEDDF9 /* SingleMenu.swift */,
 				4E2DAC8E2A6FA47C00CEDDF9 /* SetMenu.swift */,
 				4E2DAC8C2A6FA3D900CEDDF9 /* SingleMenuFunction.swift */,
@@ -215,7 +212,6 @@
 				4E2DAC7F2A6F8D5600CEDDF9 /* CreditCard.swift in Sources */,
 				4E2DAC912A6FAADE00CEDDF9 /* BasketFunctions.swift in Sources */,
 				4E2DAC8B2A6FA3AF00CEDDF9 /* SingleMenu.swift in Sources */,
-				DB8A56512A6F7ADB009B4717 /* Menu.swift in Sources */,
 				4E2DAC892A6FA17600CEDDF9 /* MenuFunctions.swift in Sources */,
 				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
 				4E2DAC812A6F8D5600CEDDF9 /* Mobile.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SingleMenu: Menu {
+class SingleMenu {
     let name:String
     let price:Int
     
