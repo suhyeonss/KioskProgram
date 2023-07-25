@@ -1,7 +1,7 @@
-class ItemType {
-    var itemType: String = ""
+
+class ItemType: MenuType {
     
-    func chooseItemType() {
+    override func chooseItemType() {
         print("\n[ 단품과 세트를 선택해 주세요 ]")
         print("1. 단품(Single)")
         print("2. 세트(Set)")

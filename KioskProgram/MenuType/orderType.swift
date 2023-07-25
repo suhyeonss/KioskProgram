@@ -1,7 +1,7 @@
-class OrderType {
-    var orderType: String = ""
+
+class OrderType: MenuType {
     
-    func chooseOrderType() {
+    override func chooseOrderType() {
         print("\n[ 식사하실 장소를 선택해 주세요 ]")
         print("1. 매장에서 식사(Eat-in)")
         print("2. 테이크 아웃(Take-out)")
