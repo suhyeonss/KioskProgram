@@ -8,7 +8,7 @@
 import Foundation
 
 class MenuType {
-    
+
     var orderType: String = ""
     var itemType: String = ""
     
@@ -27,5 +27,4 @@ class MenuType {
     func showMenu(for menucategory: Int) {
         
     }
-    
 }

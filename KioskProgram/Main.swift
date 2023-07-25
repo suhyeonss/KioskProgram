@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  Main.swift
 //  KioskProgram
 //
 //  Created by 하호형 on 2023/07/24.
@@ -15,9 +15,10 @@
 
 class Main {
 
-    let singleList: [SingleMenu] = SingleMenu.singleList
+    let orderType = OrderType()
+    let itemType = ItemType()
     
-    print(singleList)
+    
     
     
     

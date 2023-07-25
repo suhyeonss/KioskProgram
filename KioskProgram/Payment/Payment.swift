@@ -49,4 +49,14 @@ class Payment {
         
     }
     
+    // 사용자 결제 방식 입력값에 따른 페이지 이동
+    func navigatorFunction(input: Int) {
+
+    }
+    
+    // 입력값에 따른 결제 여부
+    func checkingUserPayment(input: Int) {
+
+    }
+    
 }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-class MenuFunction: MenuType {
+class MenuFunctions: MenuType {
     
     override func displayInfo() {
         while true {
             print("\"McDonalds에 오신걸 환영합니다\"")
-            orderType.chooseOrderType()
+            menuType.chooseOrderType()
             if let choiceInput = readLine(), let choiceOrder = Int(choiceInput) {
                 switch choiceOrder {
                 case 1:

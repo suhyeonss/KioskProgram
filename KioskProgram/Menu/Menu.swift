@@ -9,10 +9,10 @@ import Foundation
 
 class Menu {
     
-    var macmoringArray: [BasicMenu] = []
-    var sideArray: [BasicMenu] = []
-    var maccafeArray: [BasicMenu] = []
-    var drinkArray: [BasicMenu] = []
+    var macmoringArray: [SingleMenu] = []
+    var sideArray: [SingleMenu] = []
+    var maccafeArray: [SingleMenu] = []
+    var drinkArray: [SingleMenu] = []
     
     func addMacMoring(name:String, price:Int){
 
