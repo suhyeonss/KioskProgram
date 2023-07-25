@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D68B52F22A6F684E00B7D356 /* orderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52F02A6F684E00B7D356 /* orderType.swift */; };
+		D68B52F32A6F684E00B7D356 /* itemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68B52F12A6F684E00B7D356 /* itemType.swift */; };
 		DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB642FF62A6E0E2000A3D4BD /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D68B52F02A6F684E00B7D356 /* orderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderType.swift; sourceTree = "<group>"; };
+		D68B52F12A6F684E00B7D356 /* itemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemType.swift; sourceTree = "<group>"; };
 		DB642FF32A6E0E2000A3D4BD /* KioskProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KioskProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB642FF62A6E0E2000A3D4BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				DB642FF62A6E0E2000A3D4BD /* main.swift */,
+				D68B52F12A6F684E00B7D356 /* itemType.swift */,
+				D68B52F02A6F684E00B7D356 /* orderType.swift */,
 			);
 			path = KioskProgram;
 			sourceTree = "<group>";
@@ -120,6 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68B52F22A6F684E00B7D356 /* orderType.swift in Sources */,
+				D68B52F32A6F684E00B7D356 /* itemType.swift in Sources */,
 				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVX5V7QT8W;
+				DEVELOPMENT_TEAM = 7YZAJX9R5S;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
