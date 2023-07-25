@@ -1,3 +1,11 @@
+//
+//  ItemType.swift
+//  KioskProgram
+//
+//  Created by (^ㅗ^)7 iMac on 2023/07/25.
+//
+
+import Foundation
 
 class ItemType: MenuType {
     
