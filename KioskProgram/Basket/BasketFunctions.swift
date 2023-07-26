@@ -18,7 +18,10 @@ class BasketFunctions: Basket {
             //수정 필
             print("-장바구니-")
             for i in (0..<basketList.count) {
-                print("\(i+1). basketList[i][0]")
+                print("\(i+1). \(basketList[i][0]) 수량 \(basketList[i][2]) ₩ \(basketList[i][1])")
+            }
+            for i in (0..<basketList.count) {
+
             }
         }
         print("총액 : \(total)")
@@ -35,8 +38,6 @@ class BasketFunctions: Basket {
         default:
             print("취소되었습니다.")
         }
-        }
-
     }
     
     //장바구니의 상품을 삭제하는 메소드

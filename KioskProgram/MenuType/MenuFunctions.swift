@@ -129,14 +129,24 @@ class MenuFunctions: MenuType {
                                     } else {
                                         input = input - 1
                                         basket.append(singleMenuList.singleBurgerList[input].name)
-                                        basketFunctions.appendProduct(index: input, basket: basket)
+                                        basket.append(singleMenuList.singleBurgerList[input].price)
+                                        basketFunctions.appendProduct(basket: basket)
                                     }
-                                    
                                     
                                     
                                 case 2:
                                     itemType.itemType = "세트"
                                     showBurgerMenu()
+                                    var input = Int(readLine()!) ?? 0
+                                    
+                                    if input - 1 == -1 {
+                                        input = 0
+                                    } else {
+                                        input = input - 1
+                                        basket.append(setMenuList.setBurgerList[input].name)
+                                        basket.append(setMenuList.setBurgerList[input].price)
+                                        basketFunctions.appendProduct(basket: basket)
+                                    }
                                           
                                 case 0:
                                     print("뒤로가기")
@@ -152,9 +162,32 @@ class MenuFunctions: MenuType {
                                 case 1:
                                     itemType.itemType = "단품"
                                     showMcMorningMenu()
+                                    var input = Int(readLine()!) ?? 0
+                                    
+                                    if input - 1 == -1 {
+                                        input = 0
+                                    } else {
+                                        input = input - 1
+                                        basket.append(singleMenuList.singleMcMorningList[input].name)
+                                        basket.append(singleMenuList.singleMcMorningList[input].price)
+                                        basket.append(1) //수량
+                                        basketFunctions.appendProduct(basket: basket)
+                                    }
                                 case 2:
                                     itemType.itemType = "세트"
                                     showMcMorningMenu()
+                                    var input = Int(readLine()!) ?? 0
+                                    
+                                    if input - 1 == -1 {
+                                        input = 0
+                                    } else {
+                                        input = input - 1
+                                        basket.append(setMenuList.setMcMorningList[input].name)
+                                        basket.append(setMenuList.setMcMorningList[input].price)
+                                        basket.append(1) //수량
+                                        basketFunctions.appendProduct(basket: basket)
+                                    }
+
                                 case 0:
                                     print("뒤로가기")
                                     continue
@@ -164,12 +197,56 @@ class MenuFunctions: MenuType {
                             }
                         case 3:
                             showCoffeeMenu()
+                            var input = Int(readLine()!) ?? 0
+                            
+                            if input - 1 == -1 {
+                                input = 0
+                            } else {
+                                input = input - 1
+                                basket.append(CoffeeMenu.coffeeMenuList[input].name)
+                                basket.append(CoffeeMenu.coffeeMenuList[input].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                            }
                         case 4:
                             showDrinkMenu()
+                            var input = Int(readLine()!) ?? 0
+                            
+                            if input - 1 == -1 {
+                                input = 0
+                            } else {
+                                input = input - 1
+                                basket.append(DrinkMenu.drinkMenuList[input].name)
+                                basket.append(DrinkMenu.drinkMenuList[input].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                            }
                         case 5:
                             showSideMenu()
+                            var input = Int(readLine()!) ?? 0
+                            
+                            if input - 1 == -1 {
+                                input = 0
+                            } else {
+                                input = input - 1
+                                basket.append(SideMenu.sideMenuList[input].name)
+                                basket.append(SideMenu.sideMenuList[input].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                            }
                         case 6:
                             showDessertMenu()
+                            var input = Int(readLine()!) ?? 0
+                            
+                            if input - 1 == -1 {
+                                input = 0
+                            } else {
+                                input = input - 1
+                                basket.append(DessertMenu.dessertMenuList[input].name)
+                                basket.append(DessertMenu.dessertMenuList[input].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                            }
                         case 7:
                             print("장바구니")
                             print(String(repeating: "=", count: 30))
