@@ -21,7 +21,10 @@ class BasketFunctions: Basket {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
             }
             for i in (0..<basketList.count) {
-                print("")
+                var itemPrice = basketList[i][1] as! Int
+                var itemCount = basketList[i][2] as! Int
+
+                total = total + itemPrice * itemCount
             }
         }
         print("총액 : \(total)")
