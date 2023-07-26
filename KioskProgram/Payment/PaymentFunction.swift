@@ -24,8 +24,9 @@ class PaymentFunction: Payment {
         while true {
             switch input {
             case "1":
-                print("[신용카드 결제 페이지로 넘어갑니다.]")
+                print("[신용카드 결제 페이지로 넘어갑니다.]\n")
                 creditCard.checkListUserPayment()
+                print("\n번호를 입력해주세요: ", terminator: "")
                 var input = readLine()!
                 while true {
                     creditCard.choosePayment(input: input)
@@ -33,8 +34,9 @@ class PaymentFunction: Payment {
                 }
                 break
             case "2":
-                print("[현금 결제 페이지로 넘어갑니다.]")
+                print("[현금 결제 페이지로 넘어갑니다.]\n")
                 cash.checkListUserPayment()
+                print("\n번호를 입력해주세요: ", terminator: "")
                 var input = readLine()!
                 while true {
                     cash.choosePayment(input: input)
