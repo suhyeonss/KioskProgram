@@ -67,12 +67,7 @@ class MenuFunctions: MenuType {
     override func showDrinkMenu() {
         print("\n[ 음료 메뉴 ]")
         for (index, drink) in otherMenuList.drinkMenuList.enumerated() {
-            if drink.largePrice == nil {
-                print("\(index + 1). \(drink.name)      | W \(drink.mediumPrice)")
-            }
-            else {
-                print("\(index + 1). \(drink.name)      | W M: \(drink.mediumPrice), L: \(drink.largePrice ?? 0)")
-            }
+            print("\(index + 1). \(drink.name)      | W \(drink.price)")
         }
         print("뒤로가기")
         print("\n번호를 입력해주세요: ", terminator: "")
@@ -81,15 +76,7 @@ class MenuFunctions: MenuType {
     override func showSideMenu() {
         print("\n[ 스낵과 사이드 메뉴 ]")
         for (index, side) in otherMenuList.sideMenuList.enumerated() {
-            if side.largePrice == nil && side.smallPrice == nil {
-                print("\(index + 1). \(side.name)      | W \(side.mediumPrice)")
-            }
-            else if side.largePrice == nil {
-                print("\(index + 1). \(side.name)      | W S: \(side.smallPrice ?? 0), M: \(side.mediumPrice)")
-            }
-            else {
-                print("\(index + 1). \(side.name)      | W S: \(side.smallPrice ?? 0), M: \(side.mediumPrice), L: \(side.largePrice ?? 0)")
-            }
+            print("\(index + 1). \(side.name)       | W \(side.price)")
         }
     }
     

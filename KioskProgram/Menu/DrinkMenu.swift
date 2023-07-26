@@ -9,24 +9,22 @@ import Foundation
 
 class DrinkMenu: Menu {
     let name: String
-    let mediumPrice: Int
-    let largePrice: Int?
+    let price: Int
     
-    init(name: String, mediumPrice: Int, largePrice: Int?) {
+    init(name: String, price: Int) {
         self.name = name
-        self.mediumPrice = mediumPrice
-        self.largePrice = largePrice
+        self.price = price
     }
 }
 
 extension DrinkMenu {
     static let drinkMenuList: [DrinkMenu] = [
-        DrinkMenu(name: "코카-콜라", mediumPrice: 1700, largePrice: 2200),
-        DrinkMenu(name: "코카-콜라 제로", mediumPrice: 1700, largePrice: 2200),
-        DrinkMenu(name: "스프라이트", mediumPrice: 1700, largePrice: 2200),
-        DrinkMenu(name: "환타", mediumPrice: 1700, largePrice: 2200),
-        DrinkMenu(name: "생수", mediumPrice: 1300, largePrice: nil),
-        DrinkMenu(name: "우유", mediumPrice: 1600, largePrice: nil),
-        DrinkMenu(name: "쉐이크", mediumPrice: 2800, largePrice: nil),
+        DrinkMenu(name: "코카-콜라", price: 1700),
+        DrinkMenu(name: "코카-콜라 제로", price: 1700),
+        DrinkMenu(name: "스프라이트", price: 1700),
+        DrinkMenu(name: "환타", price: 1700),
+        DrinkMenu(name: "생수", price: 1300),
+        DrinkMenu(name: "우유", price: 1600),
+        DrinkMenu(name: "쉐이크", price: 2800),
     ]
 }
