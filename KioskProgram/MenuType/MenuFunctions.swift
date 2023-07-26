@@ -263,7 +263,6 @@ class MenuFunctions: MenuType {
                             }
                             
                         case 7:
-                            print(String(repeating: "=", count: 30))
                             basketFunctions.baksetOption()
                             let inputOption = Int(readLine() ?? "0")
                             switch inputOption {
@@ -441,7 +440,6 @@ class MenuFunctions: MenuType {
                             }
                             
                         case 7:
-                            print(String(repeating: "=", count: 30))
                             basketFunctions.baksetOption()
                             let inputOption = Int(readLine() ?? "0")
                             switch inputOption {

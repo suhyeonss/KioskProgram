@@ -12,16 +12,15 @@ class BasketFunctions: Basket {
     override func showCurrentBasket() {
         totalPrice()
         if basketList.isEmpty {
-            print(String(repeating: "=", count: 30))
             print("장바구니가 비어있습니다.")
         } else {
-            print(String(repeating: "=", count: 30))
             print("-장바구니-")
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
             }
         }
         print("금액: \(total)")
+        print(String(repeating: "=", count: 30))
     }
 
     //장바구니에 상품을 추가하는 메소드
@@ -32,6 +31,7 @@ class BasketFunctions: Basket {
         case 1:
             basketList.append(basket)
             print("장바구니에 추가되었습니다.")
+            print(String(repeating: "=", count: 30))
             print("-장바구니-")
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
@@ -84,6 +84,7 @@ class BasketFunctions: Basket {
     override func baksetOption() {
         print(String(repeating: "=", count: 30))
         showCurrentBasket()
+        
         print("1. 상품 삭제")
         print("2. 상품 전체 삭제")
         // print("3. 상품 수량 변경")
