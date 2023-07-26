@@ -15,7 +15,6 @@ class BasketFunctions: Basket {
             print("장바구니가 비어있습니다.")
         } else {
             print(String(repeating: "=", count: 30))
-            //수정 필
             print("-장바구니-")
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]) 수량 \(basketList[i][2]) ₩ \(basketList[i][1])")
@@ -43,10 +42,9 @@ class BasketFunctions: Basket {
     //장바구니의 상품을 삭제하는 메소드
     override func removeProduct() {
         print(String(repeating: "=", count: 30))
-        //수정 필
         print("-장바구니-")
         for i in (0..<basketList.count) {
-            print("\(i+1). basketList[i][0]")
+            print("\(i+1). \(basketList[i][0]) 수량 \(basketList[i][2]) ₩ \(basketList[i][1])")
         }
         
         print(String(repeating: "=", count: 30))
