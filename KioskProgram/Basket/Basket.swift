@@ -8,16 +8,12 @@
 import Foundation
 
 // 제품 정보
-enum ProductInfo {
-    case name(String)
-    case price(Int)
-    case num(Int)
-}
+var basketList = Array<[Any]>()
 
 class Basket {
     //basketList 생성
     //추후에 Array 내에 메뉴이름 - 가격 연결
-    var basketList = [ProductInfo]()
+    
     
     //장바구니에 담긴 상품의 총액
     var total = 0
@@ -27,7 +23,7 @@ class Basket {
     }
 
     //장바구니에 상품을 추가하는 메소드
-    func appendProduct(product : String, price : Int, num : Int) {
+    func appendProduct(index : Int, basket : Array<Any>) {
 
     }
     

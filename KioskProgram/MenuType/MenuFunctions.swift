@@ -19,7 +19,7 @@ class MenuFunctions: MenuType {
     
     let basketFunctions = BasketFunctions()
     
-    var basektList = [ProductInfo]()
+    var basket = [Any]()
     
     
     override func showBurgerMenu() {

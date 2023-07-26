@@ -15,32 +15,41 @@ class BasketFunctions: Basket {
             print("장바구니가 비어있습니다.")
         } else {
             print(String(repeating: "=", count: 30))
+            //수정 필
             print("-장바구니-")
             for i in (0..<basketList.count) {
-                if case let .name(name) = basketList[i] {
-                    print("\(i+1). \(name)")
-                }
+                print("\(i+1). basketList[i][0]")
             }
         }
         print("총액 : \(total)")
     }
 
     //장바구니에 상품을 추가하는 메소드
-    override func appendProduct(product : String, price : Int, num : Int) {
-        basketList.append(.name(product))
-        basketList.append(.price(price))
-        basketList.append(.num(num))
-        print("장바구니에 추가되었습니다.")
+    override func appendProduct(index : Int, basket : Array<Any>) {
+        switch index {
+        case 0:
+            return
+        default:
+            print("장바구니에 추가하시겠습니까? \n(1. Yes) \n(2. No)")
+            let inputNumber = Int(readLine() ?? "2")
+            switch inputNumber {
+            case 1:
+                basketList.append(basket)
+                print("장바구니에 추가되었습니다.")
+            default:
+                print("취소되었습니다.")
+            }
+        }
+
     }
     
     //장바구니의 상품을 삭제하는 메소드
     override func removeProduct() {
         print(String(repeating: "=", count: 30))
+        //수정 필
         print("-장바구니-")
         for i in (0..<basketList.count) {
-            if case let .name(name) = basketList[i] {
-                print("\(i+1). \(name)")
-            }
+            print("\(i+1). basketList[i][0]")
         }
         
         print(String(repeating: "=", count: 30))
