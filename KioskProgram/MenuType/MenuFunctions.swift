@@ -130,6 +130,7 @@ class MenuFunctions: MenuType {
                                         input = input - 1
                                         basket.append(singleMenuList.singleBurgerList[input].name)
                                         basket.append(singleMenuList.singleBurgerList[input].price)
+                                        basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
                                     }
                                     
@@ -145,6 +146,7 @@ class MenuFunctions: MenuType {
                                         input = input - 1
                                         basket.append(setMenuList.setBurgerList[input].name)
                                         basket.append(setMenuList.setBurgerList[input].price)
+                                        basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
                                     }
                                           
