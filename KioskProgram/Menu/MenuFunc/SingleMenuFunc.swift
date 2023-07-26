@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SingMenuFunc: Menu {
+class SingleMenuFunc: Menu {
     var singleBurgerList: [SingleMenu] = SingleMenu.singleMenuList[0]
     var singleMcMorningList: [SingleMenu] = SingleMenu.singleMenuList[1]
 }
