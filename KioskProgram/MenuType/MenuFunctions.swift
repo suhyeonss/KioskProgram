@@ -26,6 +26,7 @@ class MenuFunctions: MenuType {
         print("\n[ 버거 \(itemType.itemType == "단품" ? "단품" : "세트") 메뉴 ]")
         if itemType.itemType == "단품" {
             for (index, burger) in singleMenuList.singleBurgerList.enumerated() {
+                
                 print("\(index + 1). \(burger.name)     | W \(burger.price)")
             }
         }
@@ -121,9 +122,22 @@ class MenuFunctions: MenuType {
                                 case 1:
                                     itemType.itemType = "단품"
                                     showBurgerMenu()
+                                    var input = Int(readLine()!) ?? 0
+                                    
+                                    if input - 1 == -1 {
+                                        input = 0
+                                    } else {
+                                        input = input - 1
+                                        basket.append(singleMenuList.singleBurgerList[input].name)
+                                        basketFunctions.appendProduct(index: input, basket: basket)
+                                    }
+                                    
+                                    
+                                    
                                 case 2:
                                     itemType.itemType = "세트"
                                     showBurgerMenu()
+                                          
                                 case 0:
                                     print("뒤로가기")
                                     continue
