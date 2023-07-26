@@ -16,6 +16,7 @@ class BasketFunctions: Basket {
         } else {
             print(String(repeating: "=", count: 30))
             print("-장바구니-")
+            print(basketList)
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
             }
