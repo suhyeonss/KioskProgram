@@ -11,7 +11,6 @@
 		4E2DAC7E2A6F8D5600CEDDF9 /* PaymentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */; };
 		4E2DAC7F2A6F8D5600CEDDF9 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */; };
 		4E2DAC802A6F8D5600CEDDF9 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */; };
-		4E2DAC812A6F8D5600CEDDF9 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC7C2A6F8D5600CEDDF9 /* Mobile.swift */; };
 		4E2DAC872A6FA0A300CEDDF9 /* MenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC862A6FA0A300CEDDF9 /* MenuType.swift */; };
 		4E2DAC892A6FA17600CEDDF9 /* MenuFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC882A6FA17600CEDDF9 /* MenuFunctions.swift */; };
 		4E2DAC8B2A6FA3AF00CEDDF9 /* SingleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DAC8A2A6FA3AF00CEDDF9 /* SingleMenu.swift */; };
@@ -49,7 +48,6 @@
 		4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentFunction.swift; sourceTree = "<group>"; };
 		4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
-		4E2DAC7C2A6F8D5600CEDDF9 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		4E2DAC862A6FA0A300CEDDF9 /* MenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuType.swift; sourceTree = "<group>"; };
 		4E2DAC882A6FA17600CEDDF9 /* MenuFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFunctions.swift; sourceTree = "<group>"; };
 		4E2DAC8A2A6FA3AF00CEDDF9 /* SingleMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMenu.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */,
 				4E2DAC782A6F8D5600CEDDF9 /* Cash.swift */,
 				4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */,
-				4E2DAC7C2A6F8D5600CEDDF9 /* Mobile.swift */,
 				4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */,
 			);
 			path = Payment;
@@ -242,7 +239,6 @@
 				4E2DAC8B2A6FA3AF00CEDDF9 /* SingleMenu.swift in Sources */,
 				4E2DAC892A6FA17600CEDDF9 /* MenuFunctions.swift in Sources */,
 				DB642FF72A6E0E2000A3D4BD /* main.swift in Sources */,
-				4E2DAC812A6F8D5600CEDDF9 /* Mobile.swift in Sources */,
 				4E2DAC932A6FB02600CEDDF9 /* OrderType.swift in Sources */,
 				4E34533E2A70A46600798342 /* Menu.swift in Sources */,
 				4E3453382A70A44600798342 /* CoffeeMenu.swift in Sources */,
@@ -380,7 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVX5V7QT8W;
+				DEVELOPMENT_TEAM = 4MN45GZSDT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -391,7 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WVX5V7QT8W;
+				DEVELOPMENT_TEAM = 4MN45GZSDT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -12,14 +12,16 @@ class cash: Payment {
     
     // 결제방식 선택여부
     override func choosePayment(input: String) {
-        switch input {
-        case "1":
-            print("현금 결제")
-        case "2":
-            print("현금 결제 취소")
-        default:
-            print("잘못된 번호 선택하셨습니다.")
-            break
+        while true {
+            switch input {
+            case "1":
+                print("현금 결제")
+            case "2":
+                print("현금 결제 취소")
+            default:
+                print("잘못된 번호 선택하셨습니다.")
+                continue
+            }
         }
     }
     
