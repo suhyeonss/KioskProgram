@@ -19,9 +19,7 @@ class MenuFunctions: MenuType {
     
     let basketFunctions = BasketFunctions()
     
-    var basket = [Any]()
-    
-    
+
     override func showBurgerMenu() {
         print("\n[ 버거 \(itemType.itemType == "단품" ? "단품" : "세트") 메뉴 ]")
         if itemType.itemType == "단품" {
@@ -106,6 +104,7 @@ class MenuFunctions: MenuType {
     
     override func displayInfo() {
         while true {
+            var basket = [Any]()
             print("\"McDonalds에 오신걸 환영합니다\"")
             print(String(repeating: "=", count: 30))
             orderType.chooseOrderType()
