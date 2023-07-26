@@ -36,4 +36,9 @@ class Basket {
     func removeEverything() {
 
     }
+    
+    //장바구니에서 옵션 선택하도록 하는 메소드
+    func baksetOption() {
+        
+    }
 }

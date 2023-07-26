@@ -129,6 +129,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     else if input == 0 {
                                         continue
@@ -149,6 +150,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setBurgerList[input].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     
                                 case 0:
@@ -175,6 +177,7 @@ class MenuFunctions: MenuType {
                                         basket.append(singleMenuList.singleMcMorningList[input].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     
                                 case 2:
@@ -190,6 +193,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setMcMorningList[input].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     
                                 case 0:
@@ -211,6 +215,7 @@ class MenuFunctions: MenuType {
                                 basket.append(CoffeeMenu.coffeeMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 4:
@@ -225,6 +230,7 @@ class MenuFunctions: MenuType {
                                 basket.append(DrinkMenu.drinkMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 5:
@@ -239,6 +245,7 @@ class MenuFunctions: MenuType {
                                 basket.append(SideMenu.sideMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 6:
@@ -253,13 +260,27 @@ class MenuFunctions: MenuType {
                                 basket.append(DessertMenu.dessertMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 7:
-                            print("장바구니")
                             print(String(repeating: "=", count: 30))
-                            basketFunctions.showCurrentBasket()
-                            
+                            basketFunctions.baksetOption()
+                            let inputOption = Int(readLine() ?? "0")
+                            switch inputOption {
+                            case 1:
+                                basketFunctions.removeProduct()
+                                continue
+                            case 2:
+                                basketFunctions.removeEverything()
+                                continue
+                            // case 3:
+                            case 0:
+                                continue
+                            default:
+                                print("올바른 값을 입력해 주세요.")
+                                continue
+                            }
                         case 0:
                             print("뒤로가기")
                             continue
@@ -286,6 +307,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     else if input == 0 {
                                         continue
@@ -306,6 +328,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setBurgerList[input].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     
                                 case 0:
@@ -332,6 +355,7 @@ class MenuFunctions: MenuType {
                                         basket.append(singleMenuList.singleMcMorningList[input].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     
                                 case 2:
@@ -347,6 +371,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setMcMorningList[input].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        continue
                                     }
                                     
                                 case 0:
@@ -368,6 +393,7 @@ class MenuFunctions: MenuType {
                                 basket.append(CoffeeMenu.coffeeMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 4:
@@ -382,6 +408,7 @@ class MenuFunctions: MenuType {
                                 basket.append(DrinkMenu.drinkMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 5:
@@ -396,6 +423,7 @@ class MenuFunctions: MenuType {
                                 basket.append(SideMenu.sideMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 6:
@@ -410,13 +438,27 @@ class MenuFunctions: MenuType {
                                 basket.append(DessertMenu.dessertMenuList[input].price)
                                 basket.append(1) //수량
                                 basketFunctions.appendProduct(basket: basket)
+                                continue
                             }
                             
                         case 7:
-                            print("장바구니")
                             print(String(repeating: "=", count: 30))
-                            basketFunctions.showCurrentBasket()
-                            
+                            basketFunctions.baksetOption()
+                            let inputOption = Int(readLine() ?? "0")
+                            switch inputOption {
+                            case 1:
+                                basketFunctions.removeProduct()
+                                continue
+                            case 2:
+                                basketFunctions.removeEverything()
+                                continue
+                            // case 3:
+                            case 0:
+                                continue
+                            default:
+                                print("올바른 값을 입력해 주세요.")
+                                continue
+                            }
                         case 0:
                             print("뒤로가기")
                             continue
