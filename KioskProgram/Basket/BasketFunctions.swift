@@ -10,6 +10,7 @@ import Foundation
 class BasketFunctions: Basket {
     
     override func showCurrentBasket() {
+        totalPrice()
         if basketList.isEmpty {
             print(String(repeating: "=", count: 30))
             print("장바구니가 비어있습니다.")
@@ -19,7 +20,6 @@ class BasketFunctions: Basket {
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
             }
-            
         }
         print("금액: \(total)")
     }
@@ -58,9 +58,6 @@ class BasketFunctions: Basket {
             print(String(repeating: "=", count: 30))
             print("취소되었습니다.")
         } else {
-            var itemPrice = basketList[deleteNumber!-1][1] as! Int
-            var itemCount = basketList[deleteNumber!-1][2] as! Int
-            total -= itemPrice * itemCount
             basketList.remove(at: deleteNumber!-1)
             print(String(repeating: "=", count: 30))
             print("\(deleteNumber!)번 상품이 삭제되었습니다.")
@@ -74,7 +71,6 @@ class BasketFunctions: Basket {
         print("1. Yes \n2. No")
         let chooseOpetion = Int(readLine() ?? "2")
         if chooseOpetion == 1 {
-            total = 0
             basketList.removeAll()
             print(String(repeating: "=", count: 30))
             print("장바구니의 상품이 전체 삭제되었습니다.")
@@ -86,6 +82,7 @@ class BasketFunctions: Basket {
     
     //장바구니에서 옵션 선택하도록 하는 메소드
     override func baksetOption() {
+        print(String(repeating: "=", count: 30))
         showCurrentBasket()
         print("1. 상품 삭제")
         print("2. 상품 전체 삭제")
@@ -94,13 +91,13 @@ class BasketFunctions: Basket {
         print("\n번호를 입력해 주세요:",terminator: " ")
 
     }
-    func totalPrice() -> Int {
+    override func totalPrice(){
+        total = 0
         for i in (0..<basketList.count) {
             var itemPrice = basketList[i][1] as! Int
             var itemCount = basketList[i][2] as! Int
             total += itemPrice * itemCount
-            
         }
-        return total
+        
     }
 }

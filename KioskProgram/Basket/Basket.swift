@@ -41,4 +41,8 @@ class Basket {
     func baksetOption() {
         
     }
+    
+    func totalPrice(){
+        
+    }
 }
