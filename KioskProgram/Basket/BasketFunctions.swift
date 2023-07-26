@@ -31,6 +31,7 @@ class BasketFunctions: Basket {
     //장바구니에 상품을 추가하는 메소드
     override func appendProduct(basket : Array<Any>) {
         print("장바구니에 추가하시겠습니까? \n1. Yes \n2. No")
+        print("\n번호를 입력해주세요: ", terminator: "") 
         let inputNumber = Int(readLine() ?? "2")
         switch inputNumber {
         case 1:

@@ -101,11 +101,10 @@ class MenuFunctions: MenuType {
         print("6. Dessert")
         print("7. 장바구니")
         print("0. 종료하기")
-        print("\n 번호를 입력해주세요: ", terminator: "")
+        print("\n번호를 입력해주세요: ", terminator: "")
     }
     
     override func displayInfo() {
-        var basket = [Any]()
         print("\"McDonalds에 오신걸 환영합니다\"")
         print(String(repeating: "=", count: 30))
         orderType.chooseOrderType()
@@ -113,7 +112,7 @@ class MenuFunctions: MenuType {
             if orderTypeInt == 1 {
                 orderType.orderType = "매장"
             }
-            if  orderTypeInt == 2 {
+            else if orderTypeInt == 2 {
                 orderType.orderType = "포장"
             }
             else {
@@ -122,9 +121,10 @@ class MenuFunctions: MenuType {
         }
         
         while true {
+            var basket = [Any]()
             mainMenu()
             if let mainInt = Int(readLine() ?? "") {
-                switch mainInt {
+                switch mainInt { 
                 case 1:
                     itemType.chooseItemType()
                     if let itemTypeInt = Int(readLine() ?? "") {
@@ -223,8 +223,8 @@ class MenuFunctions: MenuType {
                     showCoffeeMenu()
                     let input = Int(readLine()!) ?? 0
                     if input > 0, input <= otherMenuList.coffeMenuList.count {
-                        basket.append(otherMenuList.coffeMenuList[input].name)
-                        basket.append(otherMenuList.coffeMenuList[input].price)
+                        basket.append(otherMenuList.coffeMenuList[(input ?? 0) - 1].name)
+                        basket.append(otherMenuList.coffeMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
                         basketFunctions.appendProduct(basket: basket)
                         continue
@@ -239,8 +239,8 @@ class MenuFunctions: MenuType {
                     showDrinkMenu()
                     let input = Int(readLine()!) ?? 0
                     if input > 0, input <= otherMenuList.drinkMenuList.count {
-                        basket.append(otherMenuList.drinkMenuList[input].name)
-                        basket.append(otherMenuList.drinkMenuList[input].price)
+                        basket.append(otherMenuList.drinkMenuList[(input ?? 0) - 1].name)
+                        basket.append(otherMenuList.drinkMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
                         basketFunctions.appendProduct(basket: basket)
                         continue
@@ -255,8 +255,8 @@ class MenuFunctions: MenuType {
                     showSideMenu()
                     let input = Int(readLine()!) ?? 0
                     if input > 0, input <= otherMenuList.sideMenuList.count {
-                        basket.append(otherMenuList.sideMenuList[input].name)
-                        basket.append(otherMenuList.sideMenuList[input].price)
+                        basket.append(otherMenuList.sideMenuList[(input ?? 0) - 1].name)
+                        basket.append(otherMenuList.sideMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
                         basketFunctions.appendProduct(basket: basket)
                         continue
@@ -271,8 +271,8 @@ class MenuFunctions: MenuType {
                     showDessertMenu()
                     let input = Int(readLine()!) ?? 0
                     if input > 0, input <= otherMenuList.dessertMenuList.count {
-                        basket.append(otherMenuList.dessertMenuList[input].name)
-                        basket.append(otherMenuList.dessertMenuList[input].price)
+                        basket.append(otherMenuList.dessertMenuList[(input ?? 0) - 1].name)
+                        basket.append(otherMenuList.dessertMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
                         basketFunctions.appendProduct(basket: basket)
                         continue

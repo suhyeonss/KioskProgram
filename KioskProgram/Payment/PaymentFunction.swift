@@ -57,11 +57,13 @@ class PaymentFunction: Payment {
         if input == 1 {
             // 결제방식 보여주는 함수
             creditCard.checkListUserPayment()
+            print("\n번호를 입력해주세요: ", terminator: "") 
             var answer = readLine()!
             creditCard.choosePayment(input: answer)
             
         } else if input == 2 {
             cash.checkListUserPayment()
+            print("\n번호를 입력해주세요: ", terminator: "")
             var answer = readLine()!
             cash.choosePayment(input: answer)
             
