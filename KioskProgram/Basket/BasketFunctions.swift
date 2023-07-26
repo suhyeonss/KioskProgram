@@ -25,7 +25,7 @@ class BasketFunctions: Basket {
 
     //장바구니에 상품을 추가하는 메소드
     override func appendProduct(basket : Array<Any>) {
-        print("장바구니에 추가하시겠습니까? \n(1. Yes) \n(2. No)")
+        print("장바구니에 추가하시겠습니까? \n1. Yes \n2. No")
         let inputNumber = Int(readLine() ?? "2")
         switch inputNumber {
         case 1:
@@ -36,6 +36,15 @@ class BasketFunctions: Basket {
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
             }
+//            print(String(repeating: "=", count: 30))
+//            print("주문을 추가하시겠습니까? \n1.Yes\n2. No(결제하기)")
+//            let appendNum = Int(readLine() ?? "1")
+//            switch appendNum {
+//            case 2:
+//                print("결제하기")
+//            default:
+//                return
+//            }
         default:
             print("취소되었습니다.")
         }
@@ -87,8 +96,8 @@ class BasketFunctions: Basket {
         
         print("1. 상품 삭제")
         print("2. 상품 전체 삭제")
-        // print("3. 상품 수량 변경")
-        print("0. 뒤로가기")
+        print("3. 결제하기")
+        print("0. 상품 추가하기")
         print("\n번호를 입력해 주세요:",terminator: " ")
 
     }

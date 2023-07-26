@@ -272,7 +272,8 @@ class MenuFunctions: MenuType {
                             case 2:
                                 basketFunctions.removeEverything()
                                 continue
-                            // case 3:
+                            case 3:
+                                print("결제하기")
                             case 0:
                                 continue
                             default:
@@ -449,7 +450,8 @@ class MenuFunctions: MenuType {
                             case 2:
                                 basketFunctions.removeEverything()
                                 continue
-                            // case 3:
+                            case 3:
+                                print("결제하기")
                             case 0:
                                 continue
                             default:
