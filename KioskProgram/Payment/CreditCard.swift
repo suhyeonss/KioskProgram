@@ -25,16 +25,16 @@ class CreditCard: Payment {
     
     // 결제방식 여부 선택
     override func choosePayment(input: String) {
-        while true {
             switch input {
             case "1":
-                print("신용카드 결제")
+                print("신용카드 결제 완료")
+                break
             case "2":
                 print("신용카드 결제 취소")
+                break
             default:
                 print("잘못된 번호 선택하셨습니다.")
-                continue
-            }
+                return
         }
     }
 }

@@ -84,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				4E2DAC7B2A6F8D5600CEDDF9 /* Payment.swift */,
-				4E2DAC782A6F8D5600CEDDF9 /* Cash.swift */,
 				4E2DAC7A2A6F8D5600CEDDF9 /* CreditCard.swift */,
+				4E2DAC782A6F8D5600CEDDF9 /* Cash.swift */,
 				4E2DAC792A6F8D5600CEDDF9 /* PaymentFunction.swift */,
 			);
 			path = Payment;

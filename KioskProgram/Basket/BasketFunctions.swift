@@ -9,6 +9,11 @@ import Foundation
 
 class BasketFunctions: Basket {
     
+    let payment = Payment()
+    let paymentFunction = PaymentFunction()
+    let creditCard = CreditCard()
+    let cash = Cash()
+    
     override func showCurrentBasket() {
         totalPrice()
         if basketList.isEmpty {
@@ -36,15 +41,14 @@ class BasketFunctions: Basket {
             for i in (0..<basketList.count) {
                 print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
             }
-//            print(String(repeating: "=", count: 30))
-//            print("주문을 추가하시겠습니까? \n1.Yes\n2. No(결제하기)")
-//            let appendNum = Int(readLine() ?? "1")
-//            switch appendNum {
-//            case 2:
-//                print("결제하기")
-//            default:
-//                return
-//            }
+            
+            payment.showList()
+            print("\n번호를 입력해주세요: ", terminator: "")
+            var input = readLine()!
+            paymentFunction.navigatorFunction(input: input)
+            
+            
+            
         default:
             print("취소되었습니다.")
         }

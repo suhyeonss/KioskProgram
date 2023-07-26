@@ -17,6 +17,8 @@ class MenuFunctions: MenuType {
     let setMenuList = SetMenuFunc()
     let otherMenuList = OtherMenu()
     
+    let paymentFunction = PaymentFunction()
+    
     let basketFunctions = BasketFunctions()
     
 
@@ -128,6 +130,7 @@ class MenuFunctions: MenuType {
                                         basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
                                         basket.append(1) //수량
                                         basketFunctions.appendProduct(basket: basket)
+                                        
                                         continue
                                     }
                                     else if input == 0 {
@@ -274,6 +277,18 @@ class MenuFunctions: MenuType {
                                 continue
                             case 3:
                                 print("결제하기")
+                                print(String(repeating: "=", count: 30))
+                                print("[총 결제금액은 \(basketFunctions.total)입니다.]")
+                                print("[주문 목록]")
+                                for i in 0..<basketList.count {
+                                    print("\(basketList[i][0])---\(basketList[i][1])---\(basketList[i][2])")
+                                }
+                                print(String(repeating: "=", count: 30))
+                                paymentFunction.showList()
+                                print("\n번호를 입력해 주세요:",terminator: " ")
+                                var input = readLine()!
+                                paymentFunction.navigatorFunction(input: input)
+                                continue
                             case 0:
                                 continue
                             default:
@@ -452,7 +467,17 @@ class MenuFunctions: MenuType {
                                 continue
                             case 3:
                                 print("결제하기")
-                            case 0:
+                                print(String(repeating: "=", count: 30))
+                                print("[총 결제금액은 \(basketFunctions.total)입니다.]")
+                                print("[주문 목록]")
+                                for i in 0..<basketList.count {
+                                    print("\(basketList[i][0])---\(basketList[i][1])---\(basketList[i][2])")
+                                }
+                                print(String(repeating: "=", count: 30))
+                                paymentFunction.showList()
+                                print("\n번호를 입력해 주세요:",terminator: " ")
+                                var input = readLine()!
+                                paymentFunction.navigatorFunction(input: input)
                                 continue
                             default:
                                 print("올바른 값을 입력해 주세요.")
