@@ -100,407 +100,228 @@ class MenuFunctions: MenuType {
         print("5. Side")
         print("6. Dessert")
         print("7. 장바구니")
-        print("0. 뒤로가기")
+        print("0. 종료하기")
         print("\n 번호를 입력해주세요: ", terminator: "")
     }
     
     override func displayInfo() {
-        while true {
-            var basket = [Any]()
-            print("\"McDonalds에 오신걸 환영합니다\"")
-            print(String(repeating: "=", count: 30))
-            orderType.chooseOrderType()
-            if let orderTypeInt = Int(readLine() ?? "") {
-                switch orderTypeInt {
-                case 1:
-                    orderType.orderType = "매장"
-                    mainMenu()
-                    if let mainInt = Int(readLine() ?? "") {
-                        switch mainInt {
-                        case 1:
-                            itemType.chooseItemType()
-                            if let itemTypeInt = Int(readLine() ?? "") {
-                                switch itemTypeInt {
-                                case 1:
-                                    itemType.itemType = "단품"
-                                    showBurgerMenu()
-                                    let input = Int(readLine() ?? "")
-                                    if input ?? 0 > 0, input ?? 0 <= singleMenuList.singleBurgerList.count {
-                                        basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].name)
-                                        basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        
-                                        continue
-                                    }
-                                    else if input == 0 {
-                                        continue
-                                    }
-                                    else {
-                                        print("올바른 번호를 입력해주세요")
-                                    }
-                                case 2:
-                                    itemType.itemType = "세트"
-                                    showBurgerMenu()
-                                    var input = Int(readLine()!) ?? 0
-                                    
-                                    if input - 1 == -1 {
-                                        input = 0
-                                    } else {
-                                        input = input - 1
-                                        basket.append(setMenuList.setBurgerList[input].name)
-                                        basket.append(setMenuList.setBurgerList[input].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    
-                                case 0:
-                                    print("뒤로가기")
-                                    continue
-                                default:
-                                    print("올바른 번호를 입력해주세요")
-                                }
-                            }
-                        case 2:
-                            itemType.chooseItemType()
-                            if let itemTypeInt = Int(readLine() ?? "") {
-                                switch itemTypeInt {
-                                case 1:
-                                    itemType.itemType = "단품"
-                                    showMcMorningMenu()
-                                    var input = Int(readLine()!) ?? 0
-                                    
-                                    if input - 1 == -1 {
-                                        input = 0
-                                    } else {
-                                        input = input - 1
-                                        basket.append(singleMenuList.singleMcMorningList[input].name)
-                                        basket.append(singleMenuList.singleMcMorningList[input].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    
-                                case 2:
-                                    itemType.itemType = "세트"
-                                    showMcMorningMenu()
-                                    var input = Int(readLine()!) ?? 0
-                                    
-                                    if input - 1 == -1 {
-                                        input = 0
-                                    } else {
-                                        input = input - 1
-                                        basket.append(setMenuList.setMcMorningList[input].name)
-                                        basket.append(setMenuList.setMcMorningList[input].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    
-                                case 0:
-                                    print("뒤로가기")
-                                    continue
-                                default:
-                                    print("올바른 번호 입력")
-                                }
-                            }
-                        case 3:
-                            showCoffeeMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(CoffeeMenu.coffeeMenuList[input].name)
-                                basket.append(CoffeeMenu.coffeeMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 4:
-                            showDrinkMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(DrinkMenu.drinkMenuList[input].name)
-                                basket.append(DrinkMenu.drinkMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 5:
-                            showSideMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(SideMenu.sideMenuList[input].name)
-                                basket.append(SideMenu.sideMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 6:
-                            showDessertMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(DessertMenu.dessertMenuList[input].name)
-                                basket.append(DessertMenu.dessertMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 7:
-                            basketFunctions.baksetOption()
-                            let inputOption = Int(readLine() ?? "0")
-                            switch inputOption {
-                            case 1:
-                                basketFunctions.removeProduct()
-                                continue
-                            case 2:
-                                basketFunctions.removeEverything()
-                                continue
-                            case 3:
-                                print("결제하기")
-                                print(String(repeating: "=", count: 30))
-                                print("[총 결제금액은 \(basketFunctions.total)입니다.]")
-                                print("[주문 목록]")
-                                for i in 0..<basketList.count {
-                                    print("\(basketList[i][0])---\(basketList[i][1])---\(basketList[i][2])")
-                                }
-                                print(String(repeating: "=", count: 30))
-                                paymentFunction.showList()
-                                print("\n번호를 입력해 주세요:",terminator: " ")
-                                var input = readLine()!
-                                paymentFunction.navigatorFunction(input: input)
-                                continue
-                            case 0:
-                                continue
-                            default:
-                                print("올바른 값을 입력해 주세요.")
-                                continue
-                            }
-                        case 0:
-                            print("뒤로가기")
-                            continue
-                        default :
-                            print("올바른 번호를 입력해주세요")
-                        }
-                    }
-                    return
-                case 2:
-                    orderType.orderType = "포장"
-                    mainMenu()
-                    if let mainInt = Int(readLine() ?? "") {
-                        switch mainInt {
-                        case 1:
-                            itemType.chooseItemType()
-                            if let itemTypeInt = Int(readLine() ?? "") {
-                                switch itemTypeInt {
-                                case 1:
-                                    itemType.itemType = "단품"
-                                    showBurgerMenu()
-                                    let input = Int(readLine() ?? "")
-                                    if input ?? 0 > 0, input ?? 0 <= singleMenuList.singleBurgerList.count {
-                                        basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].name)
-                                        basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    else if input == 0 {
-                                        continue
-                                    }
-                                    else {
-                                        print("올바른 번호를 입력해주세요")
-                                    }
-                                case 2:
-                                    itemType.itemType = "세트"
-                                    showBurgerMenu()
-                                    var input = Int(readLine()!) ?? 0
-                                    
-                                    if input - 1 == -1 {
-                                        input = 0
-                                    } else {
-                                        input = input - 1
-                                        basket.append(setMenuList.setBurgerList[input].name)
-                                        basket.append(setMenuList.setBurgerList[input].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    
-                                case 0:
-                                    print("뒤로가기")
-                                    continue
-                                default:
-                                    print("올바른 번호를 입력해주세요")
-                                }
-                            }
-                        case 2:
-                            itemType.chooseItemType()
-                            if let itemTypeInt = Int(readLine() ?? "") {
-                                switch itemTypeInt {
-                                case 1:
-                                    itemType.itemType = "단품"
-                                    showMcMorningMenu()
-                                    var input = Int(readLine()!) ?? 0
-                                    
-                                    if input - 1 == -1 {
-                                        input = 0
-                                    } else {
-                                        input = input - 1
-                                        basket.append(singleMenuList.singleMcMorningList[input].name)
-                                        basket.append(singleMenuList.singleMcMorningList[input].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    
-                                case 2:
-                                    itemType.itemType = "세트"
-                                    showMcMorningMenu()
-                                    var input = Int(readLine()!) ?? 0
-                                    
-                                    if input - 1 == -1 {
-                                        input = 0
-                                    } else {
-                                        input = input - 1
-                                        basket.append(setMenuList.setMcMorningList[input].name)
-                                        basket.append(setMenuList.setMcMorningList[input].price)
-                                        basket.append(1) //수량
-                                        basketFunctions.appendProduct(basket: basket)
-                                        continue
-                                    }
-                                    
-                                case 0:
-                                    print("뒤로가기")
-                                    continue
-                                default:
-                                    print("올바른 번호 입력")
-                                }
-                            }
-                        case 3:
-                            showCoffeeMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(CoffeeMenu.coffeeMenuList[input].name)
-                                basket.append(CoffeeMenu.coffeeMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 4:
-                            showDrinkMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(DrinkMenu.drinkMenuList[input].name)
-                                basket.append(DrinkMenu.drinkMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 5:
-                            showSideMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(SideMenu.sideMenuList[input].name)
-                                basket.append(SideMenu.sideMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 6:
-                            showDessertMenu()
-                            var input = Int(readLine()!) ?? 0
-                            
-                            if input - 1 == -1 {
-                                input = 0
-                            } else {
-                                input = input - 1
-                                basket.append(DessertMenu.dessertMenuList[input].name)
-                                basket.append(DessertMenu.dessertMenuList[input].price)
-                                basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
-                                continue
-                            }
-                            
-                        case 7:
-                            basketFunctions.baksetOption()
-                            let inputOption = Int(readLine() ?? "0")
-                            switch inputOption {
-                            case 1:
-                                basketFunctions.removeProduct()
-                                continue
-                            case 2:
-                                basketFunctions.removeEverything()
-                                continue
-                            case 3:
-                                print("결제하기")
-                                print(String(repeating: "=", count: 30))
-                                print("[총 결제금액은 \(basketFunctions.total)입니다.]")
-                                print("[주문 목록]")
-                                for i in 0..<basketList.count {
-                                    print("\(basketList[i][0])---\(basketList[i][1])---\(basketList[i][2])")
-                                }
-                                print(String(repeating: "=", count: 30))
-                                paymentFunction.showList()
-                                print("\n번호를 입력해 주세요:",terminator: " ")
-                                var input = readLine()!
-                                paymentFunction.navigatorFunction(input: input)
-                                continue
-                            default:
-                                print("올바른 값을 입력해 주세요.")
-                                continue
-                            }
-                        case 0:
-                            print("뒤로가기")
-                            continue
-                        default :
-                            print("올바른 번호를 입력해주세요")
-                        }
-                    }
-                    return
-                case 0:
-                    print("주문을 종료합니다")
-                    return
-                default:
-                    print("올바른 번호를 입력해주세요")
-                }
+        var basket = [Any]()
+        print("\"McDonalds에 오신걸 환영합니다\"")
+        print(String(repeating: "=", count: 30))
+        orderType.chooseOrderType()
+        if let orderTypeInt = Int(readLine() ?? "") {
+            if orderTypeInt == 1 {
+                orderType.orderType = "매장"
+            }
+            if  orderTypeInt == 2 {
+                orderType.orderType = "포장"
+            }
+            else {
+                print("올바른 번호를 입력해주세요")
             }
         }
         
+        while true {
+            mainMenu()
+            if let mainInt = Int(readLine() ?? "") {
+                switch mainInt {
+                case 1:
+                    itemType.chooseItemType()
+                    if let itemTypeInt = Int(readLine() ?? "") {
+                        switch itemTypeInt {
+                        case 1:
+                            itemType.itemType = "단품"
+                            showBurgerMenu()
+                            let input = Int(readLine() ?? "")
+                            if input ?? 0 > 0, input ?? 0 <= singleMenuList.singleBurgerList.count {
+                                basket.append(singleMenuList.singleBurgerList[(input ?? 0) - 1].name)
+                                basket.append(singleMenuList.singleBurgerList[(input ?? 0) - 1].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                                
+                                continue
+                            }
+                            else if input == 0 {
+                                continue
+                            }
+                            else {
+                                print("올바른 번호를 입력해주세요")
+                            }
+                        case 2:
+                            itemType.itemType = "세트"
+                            showBurgerMenu()
+                            let input = Int(readLine() ?? "")
+                            if input ?? 0 > 0, input ?? 0 <= setMenuList.setBurgerList.count {
+                                basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].name)
+                                basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                                
+                                continue
+                            }
+                            else if input == 0 {
+                                continue
+                            }
+                            else {
+                                print("올바른 번호를 입력해주세요")
+                            }
+                        case 0:
+                            print("뒤로가기")
+                            continue
+                        default:
+                            print("올바른 번호를 입력해주세요")
+                        }
+                    }
+                case 2:
+                    itemType.chooseItemType()
+                    if let itemTypeInt = Int(readLine() ?? "") {
+                        switch itemTypeInt {
+                        case 1:
+                            itemType.itemType = "단품"
+                            showMcMorningMenu()
+                            let input = Int(readLine() ?? "")
+                            if input ?? 0 > 0, input ?? 0 <= singleMenuList.singleMcMorningList.count {
+                                basket.append(singleMenuList.singleMcMorningList[(input ?? 0) - 1].name)
+                                basket.append(singleMenuList.singleMcMorningList[(input ?? 0) - 1].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                                
+                                continue
+                            }
+                            else if input == 0 {
+                                continue
+                            }
+                            else {
+                                print("올바른 번호를 입력해주세요")
+                            }
+                        case 2:
+                            itemType.itemType = "세트"
+                            showMcMorningMenu()
+                            let input = Int(readLine() ?? "")
+                            if input ?? 0 > 0, input ?? 0 <= setMenuList.setMcMorningList.count {
+                                basket.append(setMenuList.setMcMorningList[(input ?? 0) - 1].name)
+                                basket.append(setMenuList.setMcMorningList[(input ?? 0) - 1].price)
+                                basket.append(1) //수량
+                                basketFunctions.appendProduct(basket: basket)
+                                
+                                continue
+                            }
+                            else if input == 0 {
+                                continue
+                            }
+                            else {
+                                print("올바른 번호를 입력해주세요")
+                            }
+                        case 0:
+                            print("뒤로가기")
+                            continue
+                        default:
+                            print("올바른 번호 입력")
+                        }
+                    }
+                case 3:
+                    showCoffeeMenu()
+                    let input = Int(readLine()!) ?? 0
+                    if input > 0, input <= otherMenuList.coffeMenuList.count {
+                        basket.append(otherMenuList.coffeMenuList[input].name)
+                        basket.append(otherMenuList.coffeMenuList[input].price)
+                        basket.append(1)
+                        basketFunctions.appendProduct(basket: basket)
+                        continue
+                    }
+                    else if input == 0 {
+                        continue
+                    }
+                    else {
+                        print("올바른 번호를 입력해주세요")
+                    }
+                case 4:
+                    showDrinkMenu()
+                    let input = Int(readLine()!) ?? 0
+                    if input > 0, input <= otherMenuList.drinkMenuList.count {
+                        basket.append(otherMenuList.drinkMenuList[input].name)
+                        basket.append(otherMenuList.drinkMenuList[input].price)
+                        basket.append(1)
+                        basketFunctions.appendProduct(basket: basket)
+                        continue
+                    }
+                    else if input == 0 {
+                        continue
+                    }
+                    else {
+                        print("올바른 번호를 입력해주세요")
+                    }
+                case 5:
+                    showSideMenu()
+                    let input = Int(readLine()!) ?? 0
+                    if input > 0, input <= otherMenuList.sideMenuList.count {
+                        basket.append(otherMenuList.sideMenuList[input].name)
+                        basket.append(otherMenuList.sideMenuList[input].price)
+                        basket.append(1)
+                        basketFunctions.appendProduct(basket: basket)
+                        continue
+                    }
+                    else if input == 0 {
+                        continue
+                    }
+                    else {
+                        print("올바른 번호를 입력해주세요")
+                    }
+                case 6:
+                    showDessertMenu()
+                    let input = Int(readLine()!) ?? 0
+                    if input > 0, input <= otherMenuList.dessertMenuList.count {
+                        basket.append(otherMenuList.dessertMenuList[input].name)
+                        basket.append(otherMenuList.dessertMenuList[input].price)
+                        basket.append(1)
+                        basketFunctions.appendProduct(basket: basket)
+                        continue
+                    }
+                    else if input == 0 {
+                        continue
+                    }
+                    else {
+                        print("올바른 번호를 입력해주세요")
+                    }
+                case 7:
+                    basketFunctions.baksetOption()
+                    let inputOption = Int(readLine() ?? "0")
+                    switch inputOption {
+                    case 1:
+                        basketFunctions.removeProduct()
+                        continue
+                    case 2:
+                        basketFunctions.removeEverything()
+                        continue
+                    case 3:
+                        print("\n[결제 메뉴]")
+                        print(String(repeating: "=", count: 30))
+                        print("[총 결제금액은 \(basketFunctions.total)입니다.]")
+                        print("[주문 목록]")
+                        for i in 0..<basketList.count {
+                            print("\(basketList[i][0])---\(basketList[i][1])---\(basketList[i][2])")
+                        }
+                        print(String(repeating: "=", count: 30))
+                        paymentFunction.showList()
+                        print("\n번호를 입력해 주세요:",terminator: " ")
+                        var input = readLine()!
+                        paymentFunction.navigatorFunction(input: input)
+                        continue
+                    case 0:
+                        continue
+                    default:
+                        print("올바른 값을 입력해 주세요.")
+                        continue
+                    }
+                case 0:
+                    print("프로그램을 종료합니다")
+                    return
+                default :
+                    print("올바른 번호를 입력해주세요")
+                    break
+                }
+            }
+        }
     }
-    
 }
 
