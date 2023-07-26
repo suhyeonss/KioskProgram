@@ -15,9 +15,18 @@
 
 import Foundation
 
-let menuFunctions = MenuFunctions()
-let menuType = MenuType()
-menuFunctions.displayInfo()
+class Main {
+    let orderType = OrderType()
+    let itemType = ItemType()
+    let menu = Menu()
+    let menuType = MenuType()
+    let menuFunc = MenuFunctions()
+}
+
+let main = Main()
+
+main.menuFunc.displayInfo()
+
 print(String(repeating: "=", count: 30))
 
 

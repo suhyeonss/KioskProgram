@@ -8,6 +8,7 @@
 import Foundation
 
 class ItemType: MenuType {
+    var itemType: String = ""
     
     // 단품 / 세트 보여주는 문구
     override func chooseItemType() {

@@ -42,6 +42,7 @@ class BasketFunctions: Basket {
                 print("\(i+1). \(name)")
             }
         }
+        
         print("========================================")
         print("삭제할 상품의 번호를 입력하세요. \n0번은 취소입니다.")
         let deleteNumber = Int(readLine() ?? "0")

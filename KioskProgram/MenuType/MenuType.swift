@@ -8,24 +8,44 @@
 import Foundation
 
 class MenuType {
-
+    
     func chooseOrderType() {
-
+        
     }
     
     func chooseItemType() {
-
+        
     }
     
     func displayInfo() {
         
     }
     
-    func showSingleMenu(for menucategory: Int) {
+    func showBurgerMenu() {
         
     }
     
-    func showSetMenu(for menucategory: Int) {
+    func mainMenu() {
+        
+    }
+    
+    func showMcMorningMenu() {
+        
+    }
+    
+    func showCoffeeMenu() {
+        
+    }
+    
+    func showDrinkMenu() {
+        
+    }
+    
+    func showSideMenu() {
+        
+    }
+    
+    func showDessertMenu() {
         
     }
 }
