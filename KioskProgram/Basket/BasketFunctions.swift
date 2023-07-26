@@ -25,20 +25,16 @@ class BasketFunctions: Basket {
     }
 
     //장바구니에 상품을 추가하는 메소드
-    override func appendProduct(index : Int, basket : Array<Any>) {
-        switch index {
-        case 0:
-            return
+    override func appendProduct(basket : Array<Any>) {
+        print("장바구니에 추가하시겠습니까? \n(1. Yes) \n(2. No)")
+        let inputNumber = Int(readLine() ?? "2")
+        switch inputNumber {
+        case 1:
+            basketList.append(basket)
+            print("장바구니에 추가되었습니다.")
         default:
-            print("장바구니에 추가하시겠습니까? \n(1. Yes) \n(2. No)")
-            let inputNumber = Int(readLine() ?? "2")
-            switch inputNumber {
-            case 1:
-                basketList.append(basket)
-                print("장바구니에 추가되었습니다.")
-            default:
-                print("취소되었습니다.")
-            }
+            print("취소되었습니다.")
+        }
         }
 
     }
