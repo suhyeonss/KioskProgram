@@ -65,7 +65,7 @@ class BasketFunctions: Basket {
             print("\n번호를 입력해주세요: ", terminator: "")
             var input = readLine()!
             paymentFunction.navigatorFunction(input: input, orderType: orderType, items: basketList)
-
+            sleep(3)
         default:
             print("취소되었습니다.")
         }
@@ -108,6 +108,7 @@ class BasketFunctions: Basket {
             print(String(repeating: "=", count: 30))
             print("취소되었습니다.")
         }
+        sleep(3)
     }
     
     //장바구니에서 옵션 선택하도록 하는 메소드
