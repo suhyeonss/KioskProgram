@@ -27,29 +27,41 @@ class MenuFunctions: MenuType {
         print("\n[ 버거 \(itemType.itemType == "단품" ? "단품" : "세트") 메뉴 ]")
         if itemType.itemType == "단품" {
             for (index, burger) in singleMenuList.singleBurgerList.enumerated() {
-                let y = String(repeating: " ", count: 15 - burger.name.count+1)
-                print(String(format:"%2d. %@"  ,index + 1, burger.name) + y + String(format: "| ₩ %5d",  burger.price))
+                let y = String(repeating: "　", count: 15 - burger.name.count)
+                print(String(format:"%2d. %@"  ,index + 1, burger.name) + y + "| ₩ " + formatter(from: burger.price))
             }
         }
         else {
             for (index, burger) in setMenuList.setBurgerList.enumerated() {
-                print("\(index + 1). \(burger.name)     | W \(burger.price)")
+                let y = String(repeating: "　", count: 15 - burger.name.count)
+                print(String(format:"%2d. %@"  ,index + 1, burger.name) + y + "| ₩ " + formatter(from: burger.price))
             }
         }
         print("0. 뒤로가기")
         print("\n번호를 입력해주세요: ", terminator: "")
     }
     
+    func formatter(from number: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+
+        let convertFormatter = formatter.string(from: NSNumber(value: number))!
+
+        return convertFormatter
+    }
+    
     override func showMcMorningMenu() {
         print("\n[ 맥 모닝 \(itemType.itemType == "단품" ? "단품" : "세트") 메뉴 ]")
         if itemType.itemType == "단품" {
             for (index, morning) in singleMenuList.singleMcMorningList.enumerated() {
-                print("\(index + 1). \(morning.name)     | W \(morning.price)")
+                let y = String(repeating: "　", count: 15 - morning.name.count)
+                print(String(format:"%2d. %@"  ,index + 1, morning.name) + y + "| ₩ " + formatter(from: morning.price))
             }
         }
         else {
             for (index, morning) in setMenuList.setMcMorningList.enumerated() {
-                print("\(index + 1). \(morning.name)     | W \(morning.price)")
+                let y = String(repeating: "　", count: 15 - morning.name.count)
+                print(String(format:"%2d. %@"  ,index + 1, morning.name) + y + "| ₩ " + formatter(from: morning.price))
             }
         }
         print("0. 뒤로가기")
@@ -59,7 +71,8 @@ class MenuFunctions: MenuType {
     override func showCoffeeMenu() {
         print("\n[ 맥카페 메뉴 ]")
         for (index, coffee) in otherMenuList.coffeMenuList.enumerated() {
-            print("\(index + 1). \(coffee.name)     | W \(coffee.price)")
+            let y = String(repeating: "　", count: 15 - coffee.name.count)
+            print(String(format:"%2d. %@"  ,index + 1, coffee.name) + y + "| ₩ " + formatter(from: coffee.price))
         }
         print("뒤로가기")
         print("\n번호를 입력해주세요: ", terminator: "")
@@ -68,7 +81,8 @@ class MenuFunctions: MenuType {
     override func showDrinkMenu() {
         print("\n[ 음료 메뉴 ]")
         for (index, drink) in otherMenuList.drinkMenuList.enumerated() {
-            print("\(index + 1). \(drink.name)      | W \(drink.price)")
+            let y = String(repeating: "　", count: 15 - drink.name.count)
+            print(String(format:"%2d. %@"  ,index + 1, drink.name) + y + "| ₩ " + formatter(from: drink.price))
         }
         print("뒤로가기")
         print("\n번호를 입력해주세요: ", terminator: "")
@@ -77,7 +91,8 @@ class MenuFunctions: MenuType {
     override func showSideMenu() {
         print("\n[ 스낵과 사이드 메뉴 ]")
         for (index, side) in otherMenuList.sideMenuList.enumerated() {
-            print("\(index + 1). \(side.name)       | W \(side.price)")
+            let y = String(repeating: "　", count: 15 - side.name.count)
+            print(String(format:"%2d. %@"  ,index + 1, side.name) + y + "| ₩ " + formatter(from: side.price))
         }
         print("뒤로가기")
         print("\n번호를 입력해주세요: ", terminator: "")
@@ -86,7 +101,8 @@ class MenuFunctions: MenuType {
     override func showDessertMenu() {
         print("\n[ 디저트 메뉴 ]")
         for (index, dessert) in otherMenuList.dessertMenuList.enumerated() {
-            print("\(index + 1). \(dessert.name)     | W \(dessert.price)")
+            let y = String(repeating: "　", count: 15 - dessert.name.count)
+            print(String(format:"%2d. %@"  ,index + 1, dessert.name) + y + "| ₩ " + formatter(from: dessert.price))
         }
         print("뒤로가기")
         print("\n번호를 입력해주세요: ", terminator: "")
@@ -297,10 +313,10 @@ class MenuFunctions: MenuType {
                     case 3:
                         print("\n[결제 메뉴]")
                         print(String(repeating: "=", count: 30))
-                        print("[총 결제금액은 \(basketFunctions.total)입니다.]")
+                        print("[총 결제금액은 ₩ \(formatter(from: basketFunctions.total))입니다.]")
                         print("[주문 목록]")
                         for i in 0..<basketList.count {
-                            print("\(basketList[i][0])---\(basketList[i][1])---\(basketList[i][2])")
+                            print("\(basketList[i][0])---₩ \(formatter(from:basketList[i][1] as! Int))---\(basketList[i][2])")
                         }
                         print(String(repeating: "=", count: 30))
                         paymentFunction.showList()

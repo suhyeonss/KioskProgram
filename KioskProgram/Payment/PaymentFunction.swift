@@ -13,9 +13,9 @@ class PaymentFunction: Payment {
     let cash = Cash()
     
     override func showList() {
-        print("[1. 신용카드 결제 페이지.]")
-        print("[2. 현금 결제 페이지.]")
-        print("[0. 메뉴 선택 페이지.]")
+        print("1. 신용카드 결제 페이지")
+        print("2. 현금 결제 페이지")
+        print("0. 메뉴 선택 페이지")
     }
     
     // 사용자 결제 방식 입력값에 따른 페이지 이동
@@ -25,6 +25,7 @@ class PaymentFunction: Payment {
             switch input {
             case "1":
                 print("[신용카드 결제 페이지로 넘어갑니다.]\n")
+                sleep(3)
                 creditCard.checkListUserPayment()
                 print("\n번호를 입력해주세요: ", terminator: "")
                 var input = readLine()!
@@ -35,6 +36,7 @@ class PaymentFunction: Payment {
                 break
             case "2":
                 print("[현금 결제 페이지로 넘어갑니다.]\n")
+                sleep(3)
                 cash.checkListUserPayment()
                 print("\n번호를 입력해주세요: ", terminator: "")
                 var input = readLine()!

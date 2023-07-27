@@ -12,6 +12,7 @@ class CreditCard: Payment {
     
     // 결제방식 보여주는 함수
     override func checkListUserPayment() {
+        print(String(repeating : "=", count : 30))
         print("[신용카드 결제 페이지입니다.]")
         let dic = ["1":"신용카드 결제완료", "2":"신용카드 결제 취소"]
         dic.sorted { $0 < $1 }.forEach { print("\($0.key). \($0.value)")}

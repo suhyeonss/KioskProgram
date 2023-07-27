@@ -16,6 +16,15 @@ class BasketFunctions: Basket {
     
     let orderNumber = OrderNumber()
     
+    func formatter(from number: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+
+        let convertFormatter = formatter.string(from: NSNumber(value: number))!
+
+        return convertFormatter
+    }
+    
     override func showCurrentBasket() {
         totalPrice()
         if basketList.isEmpty {
@@ -23,10 +32,10 @@ class BasketFunctions: Basket {
         } else {
             print("-장바구니-")
             for i in (0..<basketList.count) {
-                print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
+                print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(formatter(from: basketList[i][1] as! Int))")
             }
         }
-        print("금액: \(total)")
+        print("금액: ₩ \(formatter(from: total))")
         print(String(repeating: "=", count: 30))
     }
 
@@ -58,7 +67,7 @@ class BasketFunctions: Basket {
             print(String(repeating: "=", count: 30))
             print("-장바구니-")
             for i in (0..<basketList.count) {
-                print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
+                print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(formatter(from: basketList[i][1] as! Int))")
             }
             
             payment.showList()
@@ -76,7 +85,7 @@ class BasketFunctions: Basket {
         print(String(repeating: "=", count: 30))
         print("-장바구니-")
         for i in (0..<basketList.count) {
-            print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(basketList[i][1])")
+            print("\(i+1). \(basketList[i][0]), 수량: \(basketList[i][2]), ₩ \(formatter(from: basketList[i][1] as! Int))")
         }
         print(String(repeating: "=", count: 30))
         print("삭제할 상품의 번호를 입력하세요. \n0번은 취소입니다.")
