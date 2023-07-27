@@ -11,16 +11,12 @@
 * 전상혁: Order Type, Item Type 담당
 * 하호형: Main Menu 담당
 * 홍준영: Order Number 담당
-<br>
-<br>
+
 ### 실행 화면
 
 ![실행화면1](./kiosk1.png)
 
 ![실행화면2](./kiosk2.png)
-
-<br>
-<br>
 
 ## Keep
 1. 원활한 의사소통을 통한 문제 해결
