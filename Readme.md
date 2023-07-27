@@ -13,7 +13,7 @@
 * 홍준영: Order Number 담당
 <br>
 <br>
-
+### 실행 화면
 ![실행화면1](./kiosk1.png)
 
 ![실행화면2](./kiosk2.png)
