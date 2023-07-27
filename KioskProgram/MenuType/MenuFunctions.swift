@@ -27,8 +27,8 @@ class MenuFunctions: MenuType {
         print("\n[ 버거 \(itemType.itemType == "단품" ? "단품" : "세트") 메뉴 ]")
         if itemType.itemType == "단품" {
             for (index, burger) in singleMenuList.singleBurgerList.enumerated() {
-                
-                print("\(index + 1). \(burger.name)     | W \(burger.price)")
+                let y = String(repeating: " ", count: 15 - burger.name.count+1)
+                print(String(format:"%2d. %@"  ,index + 1, burger.name) + y + String(format: "| ₩ %5d",  burger.price))
             }
         }
         else {
