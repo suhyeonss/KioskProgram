@@ -37,7 +37,23 @@ class BasketFunctions: Basket {
         let inputNumber = Int(readLine() ?? "2")
         switch inputNumber {
         case 1:
-            basketList.append(basket)
+            var check : Bool = false
+            var index : Int = -1
+            for i in 0..<basketList.count{
+                print("i = \(i)")
+                print("basket = \(basket)")
+                if (basketList[i][0] as! String == basket[0] as! String) && (basketList[i][1] as! Int == basket[1] as! Int){
+                    check = true
+                    index = i
+                    break
+                }
+            }
+            if check {
+                basketList[index][2] = basketList[index][2] as! Int + 1
+            } else {
+                basketList.append(basket)
+            }
+            
             print("장바구니에 추가되었습니다.")
             print(String(repeating: "=", count: 30))
             print("-장바구니-")
