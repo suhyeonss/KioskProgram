@@ -29,7 +29,7 @@ class CreditCard: Payment {
             case "1":
                 print("신용카드 결제 완료")
                 orderNumrber.printOrderNumber(type: orderType, items: items)
-                break
+                exit(0)
             case "2":
                 print("신용카드 결제 취소")
                 break

@@ -16,7 +16,7 @@ class Cash: Payment {
         case "1":
             print("현금 결제")
             orderNumrber.printOrderNumber(type: orderType, items: items)
-            break
+            exit(0)
         case "2":
             print("현금 결제 취소")
             return

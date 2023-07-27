@@ -108,21 +108,21 @@ class MenuFunctions: MenuType {
     override func displayInfo() {
         print("\"McDonalds에 오신걸 환영합니다\"")
         print(String(repeating: "=", count: 30))
+        orderType.chooseOrderType()
+        if let orderTypeInt = Int(readLine() ?? "") {
+            if orderTypeInt == 1 {
+                orderType.orderType = "매장"
+            }
+            else if orderTypeInt == 2 {
+                orderType.orderType = "포장"
+            }
+            else {
+                print("올바른 번호를 입력해주세요")
+            }
+        }
         
         while true {
             var basket = [Any]()
-            orderType.chooseOrderType()
-            if let orderTypeInt = Int(readLine() ?? "") {
-                if orderTypeInt == 1 {
-                    orderType.orderType = "매장"
-                }
-                else if orderTypeInt == 2 {
-                    orderType.orderType = "포장"
-                }
-                else {
-                    print("올바른 번호를 입력해주세요")
-                }
-            }
             mainMenu()
             if let mainInt = Int(readLine() ?? "") {
                 switch mainInt { 
