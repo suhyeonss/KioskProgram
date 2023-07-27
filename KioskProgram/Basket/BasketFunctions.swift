@@ -14,6 +14,8 @@ class BasketFunctions: Basket {
     let creditCard = CreditCard()
     let cash = Cash()
     
+    let orderNumber = OrderNumber()
+    
     override func showCurrentBasket() {
         totalPrice()
         if basketList.isEmpty {
@@ -29,7 +31,7 @@ class BasketFunctions: Basket {
     }
 
     //장바구니에 상품을 추가하는 메소드
-    override func appendProduct(basket : Array<Any>) {
+    override func appendProduct(basket : Array<Any>, orderType: String) {
         print("장바구니에 추가하시겠습니까? \n1. Yes \n2. No")
         print("\n번호를 입력해주세요: ", terminator: "") 
         let inputNumber = Int(readLine() ?? "2")
@@ -46,10 +48,8 @@ class BasketFunctions: Basket {
             payment.showList()
             print("\n번호를 입력해주세요: ", terminator: "")
             var input = readLine()!
-            paymentFunction.navigatorFunction(input: input)
-            
-            
-            
+            paymentFunction.navigatorFunction(input: input, orderType: orderType, items: basketList)
+
         default:
             print("취소되었습니다.")
         }

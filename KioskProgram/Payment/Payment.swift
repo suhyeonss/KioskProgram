@@ -11,6 +11,10 @@ import Foundation
 class Payment {
     var paymentDic = ["1":"신용카드 결제", "2":"현금 결제", "0":"추가 주문"]
     
+    let orderNumrber = OrderNumber()
+    
+    let orderType = OrderType()
+    
     // 메뉴얼 표시(공통)
     func showList() {
         print(String(repeating: "=", count: 30))
@@ -45,17 +49,17 @@ class Payment {
     }
     
     // 결제방식 여부 선택
-    func choosePayment(input: String) {
+    func choosePayment(input: String, orderType: String, items: [Array<Any>]) {
         
     }
     
     // 사용자 결제 방식 입력값에 따른 페이지 이동
-    func navigatorFunction(input: String) {
+    func navigatorFunction(input: String, orderType: String, items: [Array<Any>]) {
         
     }
     
     // 입력값에 따른 결제 여부
-    func checkingUserPayment(input: Int) {
+    func checkingUserPayment(input: Int, orderType: String, items: [Array<Any>]) {
         
     }
     

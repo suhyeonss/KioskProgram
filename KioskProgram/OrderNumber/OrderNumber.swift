@@ -5,26 +5,25 @@
 //  Created by Junyoung_Hong on 2023/07/24.
 //
 
-//import Foundation
-//
-//class OrderNumber {
-//    var togo: Int = 0
-//    var forhere: Int = 0
-//    
-//    func printOrderNumber (package: String) {
-//        switch package {
-//        case "1":
-//            togo += 1
-//            print("주문번호 : A-\(forhere)\n")
-//        case "2":
-//            forhere += 1
-//            print("주문번호 : B-\(togo)\n")
-//        case "q":
-//            kioskPower = false
-//            break
-//        default:
-//            print("다시 입력해주세요.")
-//            
-//        }
-//    }
-//}
+import Foundation
+
+class OrderNumber {
+    var forhere = 0
+    var togo = 0
+
+    func printOrderNumber (type: String, items: [Array<Any>]) {
+        let randNum = Int.random(in: 1...50)
+        if type == "매장"  {
+            print("[주문 번호: A - \(randNum)]")
+            for i in items {
+                print("[제품명: \(i[0]) \(i[1]) \(i[2])]")
+            }
+        }
+        else {
+            print("[주문 번호: B - \(randNum)]")
+            for i in items {
+                print("[제품명: \(i[0]) \(i[1]) \(i[2])]")
+            }
+        }
+    }
+}

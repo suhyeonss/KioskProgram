@@ -23,7 +23,7 @@ class Basket {
     }
 
     //장바구니에 상품을 추가하는 메소드
-    func appendProduct(basket : Array<Any>) {
+    func appendProduct(basket : Array<Any>, orderType: String) {
 
     }
     

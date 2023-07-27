@@ -8,7 +8,6 @@
 import Foundation
 
 class MenuFunctions: MenuType {
-    
     let orderType = OrderType()
     let itemType = ItemType()
     let menuType = MenuType()
@@ -20,6 +19,8 @@ class MenuFunctions: MenuType {
     let paymentFunction = PaymentFunction()
     
     let basketFunctions = BasketFunctions()
+    
+    let orderNumber = OrderNumber()
     
 
     override func showBurgerMenu() {
@@ -107,21 +108,21 @@ class MenuFunctions: MenuType {
     override func displayInfo() {
         print("\"McDonalds에 오신걸 환영합니다\"")
         print(String(repeating: "=", count: 30))
-        orderType.chooseOrderType()
-        if let orderTypeInt = Int(readLine() ?? "") {
-            if orderTypeInt == 1 {
-                orderType.orderType = "매장"
-            }
-            else if orderTypeInt == 2 {
-                orderType.orderType = "포장"
-            }
-            else {
-                print("올바른 번호를 입력해주세요")
-            }
-        }
         
         while true {
             var basket = [Any]()
+            orderType.chooseOrderType()
+            if let orderTypeInt = Int(readLine() ?? "") {
+                if orderTypeInt == 1 {
+                    orderType.orderType = "매장"
+                }
+                else if orderTypeInt == 2 {
+                    orderType.orderType = "포장"
+                }
+                else {
+                    print("올바른 번호를 입력해주세요")
+                }
+            }
             mainMenu()
             if let mainInt = Int(readLine() ?? "") {
                 switch mainInt { 
@@ -137,7 +138,7 @@ class MenuFunctions: MenuType {
                                 basket.append(singleMenuList.singleBurgerList[(input ?? 0) - 1].name)
                                 basket.append(singleMenuList.singleBurgerList[(input ?? 0) - 1].price)
                                 basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
+                                basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                                 
                                 continue
                             }
@@ -155,7 +156,7 @@ class MenuFunctions: MenuType {
                                 basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].name)
                                 basket.append(setMenuList.setBurgerList[(input ?? 0) - 1].price)
                                 basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
+                                basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                                 
                                 continue
                             }
@@ -184,7 +185,7 @@ class MenuFunctions: MenuType {
                                 basket.append(singleMenuList.singleMcMorningList[(input ?? 0) - 1].name)
                                 basket.append(singleMenuList.singleMcMorningList[(input ?? 0) - 1].price)
                                 basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
+                                basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                                 
                                 continue
                             }
@@ -202,7 +203,7 @@ class MenuFunctions: MenuType {
                                 basket.append(setMenuList.setMcMorningList[(input ?? 0) - 1].name)
                                 basket.append(setMenuList.setMcMorningList[(input ?? 0) - 1].price)
                                 basket.append(1) //수량
-                                basketFunctions.appendProduct(basket: basket)
+                                basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                                 
                                 continue
                             }
@@ -226,7 +227,7 @@ class MenuFunctions: MenuType {
                         basket.append(otherMenuList.coffeMenuList[(input ?? 0) - 1].name)
                         basket.append(otherMenuList.coffeMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
-                        basketFunctions.appendProduct(basket: basket)
+                        basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                         continue
                     }
                     else if input == 0 {
@@ -242,7 +243,7 @@ class MenuFunctions: MenuType {
                         basket.append(otherMenuList.drinkMenuList[(input ?? 0) - 1].name)
                         basket.append(otherMenuList.drinkMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
-                        basketFunctions.appendProduct(basket: basket)
+                        basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                         continue
                     }
                     else if input == 0 {
@@ -258,7 +259,7 @@ class MenuFunctions: MenuType {
                         basket.append(otherMenuList.sideMenuList[(input ?? 0) - 1].name)
                         basket.append(otherMenuList.sideMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
-                        basketFunctions.appendProduct(basket: basket)
+                        basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                         continue
                     }
                     else if input == 0 {
@@ -274,7 +275,7 @@ class MenuFunctions: MenuType {
                         basket.append(otherMenuList.dessertMenuList[(input ?? 0) - 1].name)
                         basket.append(otherMenuList.dessertMenuList[(input ?? 0) - 1].price)
                         basket.append(1)
-                        basketFunctions.appendProduct(basket: basket)
+                        basketFunctions.appendProduct(basket: basket, orderType: orderType.orderType)
                         continue
                     }
                     else if input == 0 {
@@ -305,7 +306,7 @@ class MenuFunctions: MenuType {
                         paymentFunction.showList()
                         print("\n번호를 입력해 주세요:",terminator: " ")
                         var input = readLine()!
-                        paymentFunction.navigatorFunction(input: input)
+                        paymentFunction.navigatorFunction(input: input, orderType: orderType.orderType, items: basketList)
                         continue
                     case 0:
                         continue

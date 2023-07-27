@@ -11,11 +11,12 @@ import Foundation
 class Cash: Payment {
     
     // 결제방식 선택여부
-    override func choosePayment(input: String) {
+    override func choosePayment(input: String, orderType: String, items: [Array<Any>]) {
         switch input {
         case "1":
             print("현금 결제")
-            return
+            orderNumrber.printOrderNumber(type: orderType, items: items)
+            break
         case "2":
             print("현금 결제 취소")
             return
